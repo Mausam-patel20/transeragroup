@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hero Design Comparison — Transera Group Ltd.</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+  /* ============================================
+     COMPARISON PAGE — SELF-CONTAINED
+     ============================================ */
+  :root{
+    --teal:#0F7A87; --teal-700:#0A535D; --teal-900:#0B3D52;
+    --navy:#082935; --navy-deep:#051C26;
+    --gold:#C9A961; --gold-light:#E0C988;
+    --bg:#FFFFFF; --surface:#F7F9FA; --surface-2:#EEF4F5;
+    --line:#DDE5E8; --line-soft:#EAEFF1;
+    --text:#0B2730; --text-2:#4A5D66; --text-3:#7A8B92;
+    --shadow: 0 6px 24px rgba(8,41,53,.08);
+    --shadow-md: 0 12px 40px rgba(8,41,53,.10);
+    --shadow-lg: 0 24px 70px rgba(8,41,53,.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; font-family:"Manrope", system-ui, sans-serif;
+    color:var(--text); background:var(--surface);
+    -webkit-font-smoothing:antialiased;
+  }
+  .container{max-width:1280px; margin:0 auto; padding:0 clamp(20px,4vw,64px);}
+
+  /* ============================================
+     PAGE HEADER
+     ============================================ */
+  .review-header{
+    background: linear-gradient(135deg, var(--navy) 0%, var(--teal-900) 100%);
+    color:#fff;
+    padding: 64px 0 80px;
+    position:relative; overflow:hidden;
+  }
+  .review-header::before{
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(900px 500px at 100% 0%, rgba(15,122,135,.4), transparent 60%),
+      radial-gradient(700px 400px at 0% 100%, rgba(201,169,97,.1), transparent 60%);
+  }
+  .review-header::after{
+    content:""; position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .review-header .container{ position:relative; z-index:2;}
+  .review-header .label{
+    display:inline-block;
+    font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--gold-light); font-weight:700;
+    background:rgba(201,169,97,.12);
+    border:1px solid rgba(201,169,97,.3);
+    padding: 7px 16px; border-radius:999px;
+    margin-bottom: 20px;
+  }
+  .review-header h1{
+    font-family:"Fraunces", serif;
+    font-size:clamp(36px, 5vw, 56px);
+    font-weight:600; font-style:italic;
+    color:#fff; margin: 0 0 14px;
+    letter-spacing:-.02em; line-height:1.1;
+    max-width: 880px;
+  }
+  .review-header p{
+    font-size:17px; color:#cfdce1; max-width: 820px;
+    line-height:1.65; margin: 0 0 24px;
+  }
+  .toc{
+    display:flex; gap:14px; flex-wrap:wrap; margin-top:28px;
+    padding-top:28px; border-top:1px solid rgba(255,255,255,.12);
+  }
+  .toc a{
+    display:inline-flex; align-items:center; gap:10px;
+    padding: 11px 20px;
+    background: rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:999px;
+    color:#fff; text-decoration:none;
+    font-size:13.5px; font-weight:600;
+    transition: all .25s;
+  }
+  .toc a:hover{ background:rgba(201,169,97,.18); border-color:var(--gold); }
+  .toc a .num{
+    font-family:"Fraunces", serif; font-style:italic;
+    color:var(--gold-light); font-size:14px;
+  }
+
+  /* ============================================
+     COMMENTARY PANELS
+     ============================================ */
+  .commentary{
+    background:#fff;
+    border-top: 4px solid var(--teal);
+    padding: 36px clamp(28px, 4vw, 48px);
+    margin: 64px auto 0;
+    max-width: 1280px;
+    border-radius: 0;
+    box-shadow: var(--shadow);
+  }
+  .commentary-head{
+    display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+    padding-bottom:20px; border-bottom: 1px solid var(--line-soft);
+    margin-bottom:24px;
+  }
+  .variant-badge{
+    width:56px; height:56px; border-radius:14px;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-900) 100%);
+    color:#fff;
+    display:grid; place-items:center;
+    font-family:"Fraunces", serif; font-style:italic;
+    font-weight:600; font-size:24px;
+    box-shadow: 0 6px 14px rgba(15,122,135,.3);
+  }
+  .commentary h2{
+    font-family:"Manrope", sans-serif;
+    font-size:24px; font-weight:700; color:var(--navy);
+    margin: 0 0 4px; letter-spacing:-.02em;
+  }
+  .commentary h2 .lead-tag{
+    display:inline-block;
+    font-size:11px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--teal); font-weight:700;
+    background:rgba(15,122,135,.08);
+    padding: 4px 12px; border-radius:999px;
+    margin-left:10px; vertical-align:middle;
+    font-family:"Manrope", sans-serif;
+  }
+  .commentary .commentary-sub{ color:var(--text-3); font-size:14px; margin:0; font-family:"Fraunces", serif; font-style:italic;}
+  .commentary-grid{
+    display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;
+    margin-top: 4px;
+  }
+  @media (max-width: 880px){ .commentary-grid{grid-template-columns:1fr;} }
+  .commentary-grid h4{
+    font-size:11px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--text-3); font-weight:700;
+    margin: 0 0 10px;
+  }
+  .commentary-grid .label-pros{color:#2D7A52;}
+  .commentary-grid .label-cons{color:#C8722A;}
+  .commentary-grid .label-vibe{color:var(--teal);}
+  .commentary-grid p{
+    margin:0; font-size:14px; line-height:1.6; color:var(--text);
+  }
+  .commentary-grid ul{
+    margin:0; padding:0; list-style:none;
+  }
+  .commentary-grid ul li{
+    padding: 4px 0 4px 16px; position:relative;
+    font-size:14px; line-height:1.55; color:var(--text);
+  }
+  .commentary-grid ul li::before{
+    content:""; position:absolute; left:0; top:11px;
+    width:8px; height:2px; background: currentColor;
+  }
+  .commentary-grid .pros li{color:#2D7A52;}
+  .commentary-grid .cons li{color:#C8722A;}
+  .commentary-grid .vibe{
+    font-family:"Fraunces", serif; font-style:italic;
+    color: var(--text);
+    font-size: 15px; line-height:1.55;
+  }
+
+  /* ============================================
+     HERO VARIANT FRAME (the "stage")
+     ============================================ */
+  .variant-stage{
+    background: var(--bg);
+    border: 1px solid var(--line);
+    margin: 0 auto 40px;
+    max-width: 1280px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+  }
+  .variant-stage .stage-tag{
+    position:absolute; top:24px; right:24px;
+    z-index:5;
+    background:var(--navy); color:#fff;
+    font-size:10px; letter-spacing:.18em; text-transform:uppercase;
+    font-weight:700; padding: 6px 12px; border-radius:6px;
+  }
+
+  /* ============================================
+     SHARED HERO BASE STYLES (for variants)
+     ============================================ */
+  .v-utility{
+    background:var(--navy); color:#cfdce1;
+    font-size:13px; padding: 9px 0;
+  }
+  .v-utility .row{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 64px);
+  }
+  .v-utility .left{ display:flex; gap:24px; flex-wrap:wrap;}
+  .v-utility .right{ color:var(--gold-light); font-weight:500;}
+  .v-header{
+    background:#fff;
+    border-bottom: 1px solid var(--line-soft);
+    padding: 14px 0;
+  }
+  .v-header .row{
+    display:flex; justify-content:space-between; align-items:center;
+    max-width:1280px; margin:0 auto; padding: 0 clamp(20px,4vw,64px);
+  }
+  .v-header img{ height:64px; width:auto; }
+  .v-header nav{
+    display:flex; gap:30px; align-items:center;
+  }
+  .v-header nav a{
+    color:var(--text); font-size:14.5px; font-weight:500;
+    text-decoration:none;
+  }
+  .v-header nav a.cta{
+    background:var(--teal); color:#fff;
+    padding: 12px 22px; border-radius:999px;
+    font-size:14px; font-weight:600;
+  }
+  @media (max-width: 940px){
+    .v-header nav a:not(.cta){ display:none; }
+  }
+
+  /* ============================================
+     VARIANT A — CURRENT SVG ILLUSTRATION
+     ============================================ */
+  .v-a-hero{
+    position:relative; overflow:hidden;
+    padding: 80px 0 100px;
+    background:
+      radial-gradient(1200px 700px at 92% -8%, rgba(15,122,135,.13), transparent 60%),
+      radial-gradient(900px 600px at -8% 110%, rgba(11,61,82,.10), transparent 60%),
+      var(--bg);
+  }
+  .v-a-hero::before{
+    content:""; position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(11,39,48,.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(11,39,48,.025) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 80% 70% at 70% 35%, black 0%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 70% 35%, black 0%, transparent 80%);
+  }
+  .v-a-grid{
+    display:grid; grid-template-columns: 1.15fr .85fr; gap: 64px;
+    max-width:1280px; margin:0 auto; padding: 0 clamp(20px, 4vw, 64px);
+    align-items:center; position:relative;
+  }
+  @media (max-width: 940px){ .v-a-grid{grid-template-columns:1fr;} }
+  .v-a-pill{
+    display:inline-flex; align-items:center; gap:10px;
+    background: rgba(15,122,135,.08);
+    color:var(--teal-700);
+    border:1px solid rgba(15,122,135,.18);
+    padding:7px 16px; border-radius:999px;
+    font-size:13px; font-weight:600;
+    margin-bottom:24px;
+  }
+  .v-a-pill .dot{
+    width:8px; height:8px; border-radius:50%; background:var(--teal);
+  }
+  .v-a-h1{
+    font-family:"Manrope", sans-serif;
+    font-size: clamp(40px, 5.4vw, 64px);
+    font-weight:700; line-height:1.05;
+    letter-spacing:-.035em; color:var(--navy);
+    margin: 0 0 24px;
+  }
+  .v-a-h1 .accent{
+    background: linear-gradient(110deg, var(--teal) 0%, var(--teal-900) 55%, var(--gold) 110%);
+    -webkit-background-clip:text; background-clip:text;
+    color:transparent;
+    font-style:italic; font-family:"Fraunces", serif;
+    font-weight:600;
+  }
+  .v-a-sub{
+    font-size:18px; color:var(--text-2);
+    line-height:1.6; max-width:560px; margin:0 0 32px;
+  }
+  .v-a-ctas{ display:flex; gap:14px; flex-wrap:wrap;}
+  .v-a-btn{
+    padding: 14px 26px; border-radius:999px;
+    font-size:15px; font-weight:600;
+    text-decoration:none;
+    display:inline-flex; align-items:center; gap:10px;
+  }
+  .v-a-btn.primary{ background:var(--teal); color:#fff; box-shadow: 0 6px 18px rgba(15,122,135,.3);}
+  .v-a-btn.ghost{ background:transparent; color:var(--navy); border:1.5px solid var(--line);}
+
+  .v-a-art{
+    position:relative;
+    aspect-ratio: 5/6;
+    border-radius: 28px; overflow:hidden;
+    background: linear-gradient(180deg, #DEEAEC 0%, #B2CDD3 100%);
+    box-shadow: var(--shadow-lg);
+    border:1px solid rgba(255,255,255,.5);
+  }
+  .v-a-art svg{ width:100%; height:100%; display:block;}
+  .v-a-badge{
+    position:absolute; left:-14px; top:36px;
+    background:#fff; border-radius:14px; padding:14px 18px;
+    box-shadow: var(--shadow-md);
+    border:1px solid var(--line);
+    display:flex; align-items:center; gap:12px;
+    font-size:13px; z-index:3;
+  }
+  .v-a-badge .pulse{
+    width:10px; height:10px; border-radius:50%; background:#2D7A52;
+  }
+  .v-a-card{
+    position:absolute; right:-18px; bottom:36px;
+    background:#fff; border-radius:14px; padding:18px 20px;
+    box-shadow: var(--shadow-md);
+    border:1px solid var(--line);
+    max-width:240px; z-index:3;
+  }
+  .v-a-card .label{font-size:11px; color:var(--text-3); text-transform:uppercase; letter-spacing:.16em; font-weight:700;}
+  .v-a-card .value{font-size:24px; font-weight:800; color:var(--navy); line-height:1.1; margin-top:6px; font-family:"Fraunces", serif;}
+  .v-a-card .sub{font-size:12px; color:var(--text-2); margin-top:6px; line-height:1.5;}
+  .v-a-card .bar{
+    width:40px; height:3px; background:linear-gradient(90deg, var(--teal), var(--gold));
+    border-radius:2px; margin-top:12px;
+  }
+
+  /* ============================================
+     VARIANT B — PHOTOGRAPHIC PLACEHOLDER
+     ============================================ */
+  .v-b-hero{
+    position:relative; overflow:hidden;
+    padding: 80px 0 100px;
+    background:
+      linear-gradient(180deg, #F8F9FA 0%, #fff 100%);
+  }
+  .v-b-grid{
+    display:grid; grid-template-columns: 1fr 1.15fr; gap: 56px;
+    max-width:1280px; margin:0 auto; padding: 0 clamp(20px, 4vw, 64px);
+    align-items:center;
+  }
+  @media (max-width: 940px){ .v-b-grid{grid-template-columns:1fr;} }
+  .v-b-eyebrow{
+    font-size:12px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--teal); font-weight:700;
+    margin-bottom:18px;
+    display:flex; align-items:center; gap:14px;
+  }
+  .v-b-eyebrow::before{
+    content:""; width:48px; height:1px; background: var(--gold);
+  }
+  .v-b-h1{
+    font-family:"Manrope", sans-serif;
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight:800; line-height:1.05;
+    letter-spacing:-.035em; color:var(--navy);
+    margin: 0 0 22px;
+  }
+  .v-b-h1 .underline{
+    background-image: linear-gradient(transparent 70%, rgba(201,169,97,.4) 70%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .v-b-sub{ font-size:18px; color:var(--text-2); line-height:1.65; max-width:520px; margin:0 0 32px;}
+  .v-b-ctas{ display:flex; gap:14px; flex-wrap:wrap;}
+  .v-b-btn{
+    padding: 15px 28px; border-radius: 8px;
+    font-size:15px; font-weight:600;
+    text-decoration:none;
+    display:inline-flex; align-items:center; gap:10px;
+  }
+  .v-b-btn.primary{ background:var(--navy); color:#fff;}
+  .v-b-btn.ghost{ background:transparent; color:var(--navy); border:1.5px solid var(--line);}
+
+  .v-b-stats{
+    display:flex; gap:32px; flex-wrap:wrap;
+    margin-top: 40px; padding-top:28px; border-top: 1px solid var(--line);
+  }
+  .v-b-stat .num{
+    font-family:"Fraunces", serif; font-style:italic;
+    font-size:32px; font-weight:600; color:var(--teal);
+    line-height:1; letter-spacing:-.02em;
+  }
+  .v-b-stat .label{ font-size:12px; color:var(--text-3); margin-top:4px; letter-spacing:.06em;}
+
+  /* The photographic placeholder — intentional, frame-like */
+  .v-b-photo{
+    position:relative;
+    aspect-ratio: 4/5;
+    border-radius: 8px;
+    overflow:hidden;
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, #2A4D58 0%, #163643 50%, #0B2730 100%);
+  }
+  .v-b-photo::before{
+    content:""; position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(45deg,
+        rgba(255,255,255,.02) 0px,
+        rgba(255,255,255,.02) 2px,
+        transparent 2px, transparent 12px);
+  }
+  .v-b-photo::after{
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(15,122,135,.35), transparent 55%),
+      radial-gradient(circle at 70% 80%, rgba(201,169,97,.12), transparent 55%);
+  }
+  .v-b-photo-content{
+    position:absolute; inset:0; z-index:2;
+    display:flex; flex-direction:column; justify-content:space-between;
+    padding: 32px;
+  }
+  .v-b-photo-icon{
+    width:72px; height:72px; border-radius:50%;
+    border: 2px solid rgba(255,255,255,.4);
+    display:grid; place-items:center;
+    color: rgba(255,255,255,.6);
+    backdrop-filter: blur(4px);
+  }
+  .v-b-photo-label{
+    color: rgba(255,255,255,.96);
+  }
+  .v-b-photo-label .small{
+    font-size:10.5px; letter-spacing:.22em; text-transform:uppercase;
+    color: var(--gold-light); font-weight:700; margin-bottom:14px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .v-b-photo-label .small::before{
+    content:""; width:24px; height:1px; background: var(--gold);
+  }
+  .v-b-photo-label .big{
+    font-family:"Fraunces", serif; font-style:italic;
+    font-size: clamp(22px, 2.6vw, 30px);
+    font-weight:500; color:#fff;
+    line-height:1.15; max-width: 340px;
+    letter-spacing:-.01em;
+  }
+  .v-b-photo-label .note{
+    font-size:11.5px; color: rgba(255,255,255,.55);
+    font-family: "ui-monospace", "SF Mono", Menlo, monospace;
+    margin-top:16px;
+    padding-top:14px;
+    border-top: 1px dashed rgba(255,255,255,.2);
+  }
+  .v-b-floating{
+    position:absolute; right:-20px; top:36px;
+    background:#fff; border-radius:8px;
+    padding: 18px 22px;
+    box-shadow: var(--shadow-md);
+    border:1px solid var(--line);
+    z-index:3; max-width:220px;
+  }
+  .v-b-floating .label{
+    font-size:10.5px; letter-spacing:.18em; text-transform:uppercase;
+    color: var(--text-3); font-weight:700;
+  }
+  .v-b-floating .name{
+    font-size:15px; font-weight:700; color:var(--navy);
+    margin-top:6px;
+  }
+  .v-b-floating .role{
+    font-size:12.5px; color:var(--text-2);
+    font-family:"Fraunces", serif; font-style:italic;
+    margin-top:2px;
+  }
+
+  /* ============================================
+     VARIANT C — EDITORIAL / SERIF
+     ============================================ */
+  .v-c-hero{
+    position:relative; overflow:hidden;
+    padding: 96px 0 120px;
+    background: #fff;
+  }
+  .v-c-hero::before{
+    content:""; position:absolute;
+    top:50px; right: 8%; width:1px; height: 60%;
+    background: linear-gradient(180deg, transparent, var(--gold) 30%, var(--gold) 70%, transparent);
+  }
+  .v-c-hero::after{
+    content:""; position:absolute;
+    top:80px; left:8%;
+    font-family:"Fraunces", serif; font-style:italic;
+    font-size:14px; font-weight:400;
+    color: var(--gold);
+    letter-spacing:.04em;
+    transform: rotate(-90deg); transform-origin: left top;
+    white-space:nowrap;
+  }
+  .v-c-stage-mark{
+    position:absolute; top: 96px; left: clamp(20px, 4vw, 64px);
+    font-family:"Fraunces", serif; font-style:italic;
+    font-size:14px; color:var(--gold); letter-spacing:.06em;
+    display:flex; align-items:center; gap: 14px;
+  }
+  .v-c-stage-mark::after{
+    content:""; width: 56px; height:1px; background: var(--gold);
+  }
+  .v-c-content{
+    max-width: 1100px; margin: 60px auto 0;
+    padding: 0 clamp(20px, 4vw, 64px);
+    position:relative;
+  }
+  .v-c-h1{
+    font-family:"Fraunces", serif;
+    font-size: clamp(54px, 8vw, 104px);
+    font-weight:400; line-height:1;
+    letter-spacing:-.045em; color:var(--navy);
+    margin: 0 0 32px;
+    max-width: 1000px;
+  }
+  .v-c-h1 .italic{
+    font-style:italic; font-weight:500;
+    color: var(--teal-900);
+  }
+  .v-c-h1 .gold-stroke{
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--gold);
+    font-style:italic;
+  }
+  .v-c-meta-row{
+    display:grid; grid-template-columns: 1.4fr .8fr .8fr;
+    gap: 48px;
+    padding-top:40px; margin-top: 40px;
+    border-top: 1px solid var(--line);
+    align-items:start;
+  }
+  @media (max-width: 880px){ .v-c-meta-row{grid-template-columns:1fr; gap: 28px;} }
+  .v-c-sub{
+    font-family:"Manrope", sans-serif;
+    font-size: 18px; color:var(--text-2); line-height:1.6;
+    max-width: 520px; margin: 0;
+  }
+  .v-c-stat-block .num{
+    font-family:"Fraunces", serif; font-style:italic;
+    font-size: 56px; font-weight:500; color: var(--teal);
+    line-height:1; letter-spacing:-.03em;
+  }
+  .v-c-stat-block .label{
+    font-size: 12px; letter-spacing:.16em; text-transform:uppercase;
+    color: var(--text-3); margin-top: 8px; font-weight:600;
+  }
+  .v-c-cta-block{
+    display:flex; flex-direction:column; gap:12px;
+    padding: 18px 22px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+  }
+  .v-c-cta-block .label{
+    font-size: 11px; letter-spacing:.18em; text-transform:uppercase;
+    color: var(--gold); font-weight:700;
+  }
+  .v-c-cta-block .text{
+    font-family:"Fraunces", serif; font-style:italic;
+    font-size:18px; font-weight:500; color:var(--navy);
+    line-height:1.3;
+  }
+  .v-c-cta-block a{
+    color:var(--navy); text-decoration: underline; text-underline-offset: 4px;
+    font-size:14px; font-weight:600; margin-top: 4px;
+    text-decoration-color: var(--gold);
+    text-decoration-thickness: 2px;
+  }
+
+  .v-c-photo-strip{
+    margin-top: 80px;
+    height: 320px;
+    border-radius: 4px;
+    overflow:hidden;
+    background: linear-gradient(135deg, #2A4D58 0%, #163643 50%, #0B2730 100%);
+    position:relative;
+  }
+  .v-c-photo-strip::before{
+    content:""; position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(45deg, rgba(255,255,255,.02) 0px, rgba(255,255,255,.02) 2px, transparent 2px, transparent 12px),
+      radial-gradient(ellipse 60% 70% at 30% 50%, rgba(15,122,135,.4), transparent 70%),
+      radial-gradient(ellipse 50% 60% at 80% 30%, rgba(201,169,97,.18), transparent 70%);
+  }
+  .v-c-photo-strip-inner{
+    position:relative; z-index:2; height:100%;
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 40px clamp(28px, 4vw, 64px);
+    color:#fff;
+  }
+  .v-c-strip-label{
+    font-family:"Fraunces", serif; font-style:italic;
+    font-size:36px; font-weight:500; color: rgba(255,255,255,.9);
+    line-height:1.1; max-width: 480px;
+  }
+  .v-c-strip-note{
+    font-size: 11px; letter-spacing:.18em; text-transform:uppercase;
+    color: var(--gold-light); font-weight:700;
+    text-align:right; max-width: 200px;
+  }
+  .v-c-strip-note .small{
+    margin-top: 8px;
+    font-family: "ui-monospace", monospace;
+    font-size: 11px; letter-spacing:0; text-transform:none;
+    font-weight:400;
+    color: rgba(255,255,255,.5);
+  }
+
+  /* ============================================
+     COMPARISON SUMMARY
+     ============================================ */
+  .summary{
+    background: var(--surface);
+    padding: 80px 0 100px;
+    margin-top: 80px;
+    border-top: 1px solid var(--line);
+  }
+  .summary h2{
+    font-family:"Fraunces", serif;
+    font-size: clamp(28px, 3.5vw, 40px); font-weight:600; font-style:italic;
+    color: var(--navy); margin: 0 0 12px; letter-spacing:-.02em;
+  }
+  .summary .lead{
+    font-size:17px; color:var(--text-2); max-width: 760px; margin: 0 0 44px;
+  }
+  .compare-table{
+    background:#fff;
+    border: 1px solid var(--line);
+    border-radius: 8px; overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .compare-row{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .compare-row:last-child{ border-bottom: none;}
+  .compare-row > div{
+    padding: 18px 22px;
+    font-size: 14px; line-height: 1.5;
+    border-right: 1px solid var(--line-soft);
+  }
+  .compare-row > div:last-child{ border-right: none;}
+  .compare-row.head{
+    background: var(--navy); color:#fff;
+  }
+  .compare-row.head > div{
+    border-color: rgba(255,255,255,.1);
+    font-weight:700; font-size: 14px;
+    letter-spacing: .04em;
+  }
+  .compare-row.head .v-tag{
+    display:inline-block;
+    padding: 3px 10px; border-radius:999px;
+    font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+    background: rgba(201,169,97,.2); color: var(--gold-light);
+    margin-bottom: 4px; font-weight:700;
+  }
+  .compare-row.head .v-name{
+    font-family:"Fraunces", serif; font-style:italic;
+    font-weight:500; font-size:16px;
+    color: #fff;
+  }
+  .compare-row .row-label{
+    background: var(--surface);
+    font-weight: 700; color: var(--navy);
+    font-size: 13px; letter-spacing: .04em;
+  }
+  @media (max-width: 880px){
+    .compare-row{ grid-template-columns: 1fr;}
+    .compare-row > div{ border-right:none;}
+    .compare-row .row-label{ background:var(--navy); color:#fff;}
+    .compare-row.head{ display:none;}
+    .compare-row > div::before{
+      content: attr(data-label);
+      display: block;
+      font-size: 10px; letter-spacing:.18em; text-transform:uppercase;
+      color: var(--gold); font-weight:700; margin-bottom: 4px;
+    }
+    .compare-row .row-label::before{ display:none;}
+  }
+
+  /* ============================================
+     FEEDBACK PROMPT
+     ============================================ */
+  .feedback{
+    background: linear-gradient(135deg, var(--navy) 0%, var(--teal-900) 100%);
+    color:#fff;
+    padding: 80px 0;
+    position:relative; overflow:hidden;
+  }
+  .feedback::before{
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(900px 500px at 100% 0%, rgba(201,169,97,.18), transparent 60%),
+      radial-gradient(600px 400px at 0% 100%, rgba(15,122,135,.4), transparent 60%);
+  }
+  .feedback .container{ position:relative; z-index:2; max-width: 880px;}
+  .feedback h2{
+    font-family:"Fraunces", serif; font-style:italic; font-weight:600;
+    font-size: clamp(28px, 3.6vw, 40px);
+    color:#fff; margin: 0 0 18px; letter-spacing:-.02em;
+  }
+  .feedback p{ color:#cfdce1; font-size:16px; line-height:1.7; margin: 0 0 28px;}
+  .feedback ol{
+    counter-reset: q;
+    list-style: none; padding: 0; margin: 0;
+  }
+  .feedback ol li{
+    counter-increment: q;
+    padding: 16px 24px 16px 64px;
+    position:relative;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #cfdce1;
+  }
+  .feedback ol li::before{
+    content: counter(q);
+    position:absolute; left:18px; top:50%; transform:translateY(-50%);
+    width: 32px; height: 32px; border-radius:50%;
+    background: var(--gold); color: var(--navy);
+    display:grid; place-items:center;
+    font-family:"Fraunces", serif; font-style:italic;
+    font-weight:600; font-size:15px;
+  }
+  .feedback strong{ color: var(--gold-light);}
+
+</style>
+</head>
+<body>
+
+<!-- =====================================================
+     PAGE HEADER
+     ===================================================== -->
+<header class="review-header">
+  <div class="container">
+    <span class="label">Design Review · Hero Variants</span>
+    <h1>Three hero treatments. Same message. Same brand. <br>Different posture.</h1>
+    <p>Below are three distinct directions for the homepage hero — the single most important section of the site. Each carries the same core message and uses the same brand palette and logo. What changes is the <strong style="color:#fff;">visual posture</strong>: how the firm wants to be perceived in that critical first three seconds. Scroll through, then jot reactions to the questions at the bottom.</p>
+    <nav class="toc">
+      <a href="#variant-a"><span class="num">A</span> Tech-Illustrated <span style="opacity:.6;">— current</span></a>
+      <a href="#variant-b"><span class="num">B</span> Photographic Realism</a>
+      <a href="#variant-c"><span class="num">C</span> Editorial / Serif</a>
+      <a href="#summary"><span class="num">→</span> Comparison &amp; Feedback</a>
+    </nav>
+  </div>
+</header>
+
+<!-- =====================================================
+     VARIANT A COMMENTARY
+     ===================================================== -->
+<div class="commentary" id="variant-a">
+  <div class="commentary-head">
+    <div class="variant-badge">A</div>
+    <div>
+      <h2>Tech-Illustrated <span class="lead-tag">Current Direction</span></h2>
+      <p class="commentary-sub">Custom SVG illustration · Sans-serif throughout · Floating info cards · Gold gradient accent</p>
+    </div>
+  </div>
+  <div class="commentary-grid">
+    <div>
+      <h4 class="label-vibe">Posture</h4>
+      <p class="vibe">Modern infrastructure-tech firm. Professional but approachable. Closer in feel to a SaaS or fintech company than a traditional consultancy.</p>
+    </div>
+    <div>
+      <h4 class="label-pros">What it does well</h4>
+      <ul class="pros">
+        <li>Distinctive — won't be confused with WSP or Stantec</li>
+        <li>Reliable rendering — no broken-image risk</li>
+        <li>Floating data cards signal "we measure things"</li>
+        <li>Friendly enough for SME audience</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="label-cons">What it gives up</h4>
+      <ul class="cons">
+        <li>Reads as "designed" rather than "real"</li>
+        <li>Illustration may feel less authoritative for utility / municipal buyers</li>
+        <li>Less editorial gravitas than Tier-1 consulting sites</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================
+     VARIANT A — RENDERED HERO
+     ===================================================== -->
+<div class="variant-stage">
+  <span class="stage-tag">Variant A</span>
+
+  <div class="v-utility">
+    <div class="row">
+      <div class="left">📞 +1 (365) 777-1235 &nbsp;&nbsp; ✉ ceo@transeragroup.com</div>
+      <div class="right">● Serving North America &middot; Selective Global</div>
+    </div>
+  </div>
+  <div class="v-header">
+    <div class="row">
+      <img src="assets/logo.png" alt="Transera">
+      <nav>
+        <a href="#">Home</a><a href="#">About</a><a href="#">Services</a><a href="#">Approach</a><a href="#">Industries</a>
+        <a href="#" class="cta">Book a Call →</a>
+      </nav>
+    </div>
+  </div>
+
+  <section class="v-a-hero">
+    <div class="v-a-grid">
+      <div>
+        <div class="v-a-pill">
+          <span class="dot"></span>
+          Owner-side advisory · Concept to commissioning
+        </div>
+        <h1 class="v-a-h1">Electrification infrastructure delivered with <span class="accent">clarity, control &amp; confidence.</span></h1>
+        <p class="v-a-sub">Owner-side advisory and project governance for EV charging and electrical infrastructure programs — built for fleets, SMEs, OEMs, and public-sector clients who need structure and discipline without big-consultant overhead.</p>
+        <div class="v-a-ctas">
+          <a href="#" class="v-a-btn primary">Book a Strategy Call →</a>
+          <a href="#" class="v-a-btn ghost">Request Readiness Snapshot</a>
+        </div>
+      </div>
+      <div class="v-a-art">
+        <svg viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="aSky" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#DEEAEC"/><stop offset="1" stop-color="#A8C5CB"/></linearGradient>
+            <linearGradient id="aGround" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#9CB6BC"/><stop offset="1" stop-color="#728E96"/></linearGradient>
+            <linearGradient id="aCharger" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0F7A87"/><stop offset=".55" stop-color="#0B3D52"/><stop offset="1" stop-color="#082935"/></linearGradient>
+            <linearGradient id="aScreen" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#7AC9D2"/><stop offset="1" stop-color="#0F7A87"/></linearGradient>
+            <linearGradient id="aEv" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#E8EEF0"/><stop offset="1" stop-color="#B8C8CC"/></linearGradient>
+          </defs>
+          <rect width="500" height="380" fill="url(#aSky)"/>
+          <g opacity=".22" fill="#0B3D52"><rect x="20" y="270" width="40" height="110"/><rect x="65" y="240" width="32" height="140"/><rect x="100" y="285" width="28" height="95"/><rect x="135" y="220" width="50" height="160"/><rect x="190" y="260" width="30" height="120"/><rect x="225" y="240" width="44" height="140"/><rect x="275" y="280" width="26" height="100"/><rect x="306" y="230" width="38" height="150"/><rect x="350" y="260" width="32" height="120"/><rect x="388" y="248" width="46" height="132"/><rect x="440" y="278" width="32" height="102"/></g>
+          <rect y="380" width="500" height="220" fill="url(#aGround)"/>
+          <line x1="0" y1="500" x2="500" y2="500" stroke="#fff" stroke-width="3" stroke-dasharray="14 16" opacity=".5"/>
+          <g transform="translate(60 410)">
+            <ellipse cx="160" cy="120" rx="170" ry="14" fill="#000" opacity=".18"/>
+            <path d="M 10 95 Q 20 60 60 50 L 110 38 Q 150 30 200 32 L 260 36 Q 300 40 320 75 L 325 95 Z" fill="url(#aEv)" stroke="#88A0A6" stroke-width="1.2"/>
+            <path d="M 70 60 L 110 42 L 200 40 L 250 60 L 250 75 L 70 75 Z" fill="#26414A" opacity=".7"/>
+            <circle cx="75" cy="100" r="20" fill="#1A2530"/><circle cx="75" cy="100" r="9" fill="#728E96"/>
+            <circle cx="255" cy="100" r="20" fill="#1A2530"/><circle cx="255" cy="100" r="9" fill="#728E96"/>
+          </g>
+          <g transform="translate(345 230)">
+            <rect x="0" y="170" width="76" height="14" rx="2" fill="#1A2530"/>
+            <rect x="6" y="0" width="64" height="180" rx="10" fill="url(#aCharger)" stroke="#082935"/>
+            <rect x="14" y="14" width="48" height="58" rx="4" fill="url(#aScreen)"/>
+            <polyline points="18,60 26,52 32,56 40,42 48,48 54,38 60,32" fill="none" stroke="#fff" stroke-width="1.4"/>
+            <path d="M 35 110 L 30 130 L 40 130 L 35 152 L 48 124 L 38 124 Z" fill="#C9A961"/>
+            <path d="M 12 50 Q -20 80 -10 130 Q -5 165 30 175" fill="none" stroke="#1A2530" stroke-width="6" stroke-linecap="round"/>
+          </g>
+          <circle cx="420" cy="80" r="48" fill="#FFE9A0" opacity=".5"/>
+          <circle cx="420" cy="80" r="22" fill="#FFE9A0" opacity=".8"/>
+        </svg>
+        <div class="v-a-badge">
+          <span class="pulse"></span>
+          <div>
+            <div style="font-weight:700; color:var(--navy); font-size:13px;">Live program governance</div>
+            <div style="color:var(--text-3); font-size:12px;">Real-time risk &amp; cost dashboards</div>
+          </div>
+        </div>
+        <div class="v-a-card">
+          <div class="label">Avoided emissions tracked</div>
+          <div class="value">Scope 1 &amp; 2</div>
+          <div class="sub">Per-project ESG reporting on every program</div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- =====================================================
+     VARIANT B COMMENTARY
+     ===================================================== -->
+<div class="commentary" id="variant-b">
+  <div class="commentary-head">
+    <div class="variant-badge">B</div>
+    <div>
+      <h2>Photographic Realism <span class="lead-tag">More "consultancy" feel</span></h2>
+      <p class="commentary-sub">Real-photo placeholder · Sans-serif headline with gold underline · Inline stat strip · Clean rectangular geometry</p>
+    </div>
+  </div>
+  <div class="commentary-grid">
+    <div>
+      <h4 class="label-vibe">Posture</h4>
+      <p class="vibe">Established infrastructure consultancy. Closer to WSP, Arcadis, or Burns &amp; McDonnell. Says "we are real, we are seasoned, we are not a startup."</p>
+    </div>
+    <div>
+      <h4 class="label-pros">What it does well</h4>
+      <ul class="pros">
+        <li>Photographic realism builds trust faster</li>
+        <li>Better fit for utility / municipal procurement teams</li>
+        <li>Inline stats are more confident than cards</li>
+        <li>Reads "professional services" not "tech product"</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="label-cons">What it gives up</h4>
+      <ul class="cons">
+        <li>Requires sourcing real, on-brand photography (~$200–$800)</li>
+        <li>Less distinctive — could be confused with larger firms</li>
+        <li>Stock photography risk: looks generic if poorly chosen</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================
+     VARIANT B — RENDERED HERO
+     ===================================================== -->
+<div class="variant-stage">
+  <span class="stage-tag">Variant B</span>
+
+  <div class="v-utility">
+    <div class="row">
+      <div class="left">📞 +1 (365) 777-1235 &nbsp;&nbsp; ✉ ceo@transeragroup.com</div>
+      <div class="right">● Serving North America &middot; Selective Global</div>
+    </div>
+  </div>
+  <div class="v-header">
+    <div class="row">
+      <img src="assets/logo.png" alt="Transera">
+      <nav>
+        <a href="#">Home</a><a href="#">About</a><a href="#">Services</a><a href="#">Approach</a><a href="#">Industries</a>
+        <a href="#" class="cta">Book a Call →</a>
+      </nav>
+    </div>
+  </div>
+
+  <section class="v-b-hero">
+    <div class="v-b-grid">
+      <div>
+        <div class="v-b-eyebrow">Owner-Side Infrastructure Advisory</div>
+        <h1 class="v-b-h1">Electrification infrastructure, delivered with <span class="underline">clarity and control.</span></h1>
+        <p class="v-b-sub">Owner-side advisory, EPCM coordination, and program governance for EV charging and electrical infrastructure — built for the operators between Tier-1 consulting overhead and DIY execution risk.</p>
+        <div class="v-b-ctas">
+          <a href="#" class="v-b-btn primary">Book a Strategy Call →</a>
+          <a href="#" class="v-b-btn ghost">View Services</a>
+        </div>
+        <div class="v-b-stats">
+          <div class="v-b-stat"><div class="num">20+</div><div class="label">YEARS DELIVERY</div></div>
+          <div class="v-b-stat"><div class="num">1,500+</div><div class="label">CHARGERS DEPLOYED</div></div>
+          <div class="v-b-stat"><div class="num">300+</div><div class="label">SITES SUPPORTED</div></div>
+          <div class="v-b-stat"><div class="num">$100M+</div><div class="label">PORTFOLIO EXPOSURE</div></div>
+        </div>
+      </div>
+      <div style="position:relative;">
+        <div class="v-b-photo">
+          <div class="v-b-photo-content">
+            <div>
+              <div class="v-b-photo-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              </div>
+            </div>
+            <div class="v-b-photo-label">
+              <div class="small">Photographic Hero</div>
+              <div class="big">EV charging in operation — fleet depot or commercial site at golden hour.</div>
+              <div class="note">Replace with /assets/hero-charging.jpg<br>(1200 × 1500px recommended)</div>
+            </div>
+          </div>
+        </div>
+        <div class="v-b-floating">
+          <div class="label">Founder</div>
+          <div class="name">Kapil Shah</div>
+          <div class="role">PMP, C.Tech, Master Electrician</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- =====================================================
+     VARIANT C COMMENTARY
+     ===================================================== -->
+<div class="commentary" id="variant-c">
+  <div class="commentary-head">
+    <div class="variant-badge">C</div>
+    <div>
+      <h2>Editorial / Serif <span class="lead-tag">McKinsey Quarterly tone</span></h2>
+      <p class="commentary-sub">Massive serif display · Single-column dominant · Editorial spacing · Gold rule details · Photo as horizontal accent</p>
+    </div>
+  </div>
+  <div class="commentary-grid">
+    <div>
+      <h4 class="label-vibe">Posture</h4>
+      <p class="vibe">Thought leader. Premium advisory. Says "I publish ideas, I'm invited to speak, I am not for everyone." Closer in feel to a McKinsey, BCG, or Stripe Press.</p>
+    </div>
+    <div>
+      <h4 class="label-pros">What it does well</h4>
+      <ul class="pros">
+        <li>Most distinctive — clearly stands apart from peer firms</li>
+        <li>Reinforces speaking / panelist positioning naturally</li>
+        <li>Premium signaling without saying "premium"</li>
+        <li>Ages well — editorial design dates slowly</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="label-cons">What it gives up</h4>
+      <ul class="cons">
+        <li>May feel "too design-y" for procurement-driven buyers</li>
+        <li>Risk of reading as agency or branding firm, not infrastructure</li>
+        <li>Serif headlines need confident copywriting to land</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================
+     VARIANT C — RENDERED HERO
+     ===================================================== -->
+<div class="variant-stage">
+  <span class="stage-tag">Variant C</span>
+
+  <div class="v-utility">
+    <div class="row">
+      <div class="left">📞 +1 (365) 777-1235 &nbsp;&nbsp; ✉ ceo@transeragroup.com</div>
+      <div class="right">● Serving North America &middot; Selective Global</div>
+    </div>
+  </div>
+  <div class="v-header">
+    <div class="row">
+      <img src="assets/logo.png" alt="Transera">
+      <nav>
+        <a href="#">Home</a><a href="#">About</a><a href="#">Services</a><a href="#">Approach</a><a href="#">Industries</a>
+        <a href="#" class="cta">Book a Call →</a>
+      </nav>
+    </div>
+  </div>
+
+  <section class="v-c-hero">
+    <div class="v-c-stage-mark">No. 01 — Foundation</div>
+    <div class="v-c-content">
+      <h1 class="v-c-h1">
+        Electrification, <span class="italic">delivered</span> with <span class="gold-stroke">clarity</span>, control,<br>and confidence.
+      </h1>
+      <div class="v-c-meta-row">
+        <p class="v-c-sub">Owner-side advisory and EPCM coordination for EV charging and electrical infrastructure programs — written for the operators that sit between Tier-1 consultants and DIY execution.</p>
+        <div class="v-c-stat-block">
+          <div class="num">1,500<span style="font-size:.5em; vertical-align:super;">+</span></div>
+          <div class="label">EV Chargers Delivered</div>
+        </div>
+        <div class="v-c-cta-block">
+          <span class="label">Begin</span>
+          <span class="text">Book a 30-minute<br>strategy call.</span>
+          <a href="#">No obligation, just clarity →</a>
+        </div>
+      </div>
+
+      <div class="v-c-photo-strip">
+        <div class="v-c-photo-strip-inner">
+          <div class="v-c-strip-label">"Most programs do not fail on the engineering. They fail on coordination, sequencing, and governance."</div>
+          <div class="v-c-strip-note">Photographic Strip<div class="small">/assets/hero-strip.jpg<br>1600 × 500px</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- =====================================================
+     COMPARISON SUMMARY
+     ===================================================== -->
+<section class="summary" id="summary">
+  <div class="container">
+    <h2>Side-by-side comparison</h2>
+    <p class="lead">A quick reference. Use this to articulate which posture fits how Transera should be perceived in the first three seconds — and use the questions below to give me concrete reactions.</p>
+
+    <div class="compare-table">
+      <div class="compare-row head">
+        <div></div>
+        <div><span class="v-tag">A</span><br><span class="v-name">Tech-Illustrated</span></div>
+        <div><span class="v-tag">B</span><br><span class="v-name">Photographic</span></div>
+        <div><span class="v-tag">C</span><br><span class="v-name">Editorial / Serif</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="row-label">Headline typography</div>
+        <div data-label="A">Sans-serif (Manrope) with gold-gradient italic accent</div>
+        <div data-label="B">Sans-serif (Manrope) with gold underline highlight</div>
+        <div data-label="C">Massive serif (Fraunces) with stroked gold word</div>
+      </div>
+      <div class="compare-row">
+        <div class="row-label">Imagery</div>
+        <div data-label="A">Custom SVG illustration with floating data cards</div>
+        <div data-label="B">Photographic hero placeholder + founder card</div>
+        <div data-label="C">Horizontal photographic strip as quotation backdrop</div>
+      </div>
+      <div class="compare-row">
+        <div class="row-label">Layout</div>
+        <div data-label="A">Two-column (60/40) with multiple floating elements</div>
+        <div data-label="B">Two-column (50/50) with inline stat strip</div>
+        <div data-label="C">Single-column dominant, three-column meta row</div>
+      </div>
+      <div class="compare-row">
+        <div class="row-label">Closest peer firms</div>
+        <div data-label="A">Modern SaaS / fintech / EV-tech startups</div>
+        <div data-label="B">WSP, Arcadis, Burns &amp; McDonnell, Stantec</div>
+        <div data-label="C">McKinsey, BCG, Stripe Press, FT.com</div>
+      </div>
+      <div class="compare-row">
+        <div class="row-label">Best buyer fit</div>
+        <div data-label="A">SMEs, OEM partnerships, modern fleets</div>
+        <div data-label="B">Utilities, municipal procurement, large fleets</div>
+        <div data-label="C">Boards, executive sponsors, speaking circuits</div>
+      </div>
+      <div class="compare-row">
+        <div class="row-label">Production cost to launch</div>
+        <div data-label="A">$0 — already built and ready</div>
+        <div data-label="B">$200–$800 in stock photo licensing</div>
+        <div data-label="C">$200–$1,500 (photo + careful copy edit)</div>
+      </div>
+      <div class="compare-row">
+        <div class="row-label">Risk if it ages</div>
+        <div data-label="A">Could feel "designed" / templated in 2–3 years</div>
+        <div data-label="B">Photo will date; replace every 3–4 years</div>
+        <div data-label="C">Editorial design dates slowest</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     FEEDBACK PROMPT
+     ===================================================== -->
+<section class="feedback">
+  <div class="container">
+    <h2>How to give me notes that actually help.</h2>
+    <p>Tomorrow morning, sit with the three variants above and the benchmark sites you mentioned (WSP, Arcadis, Stantec, CIMA+). Don't try to redesign — just <strong>react</strong>. Type your answers as quickly as you can; instinct is more useful than analysis.</p>
+    <ol>
+      <li>Of A, B, C — which one would <strong>your most demanding prospect</strong> (a municipal procurement officer or fleet director) take most seriously? Why?</li>
+      <li>Which one feels <strong>most "like Kapil"</strong> — the actual person and how you want to show up? Why?</li>
+      <li>Looking at WSP / Arcadis / Stantec next to these three — which variant <strong>holds its own</strong>, and which feels weaker by comparison?</li>
+      <li>Is there a <strong>fourth direction</strong> you keep wanting that none of these capture? Describe it in one sentence.</li>
+      <li>Which variant could you imagine still loving in <strong>three years</strong>?</li>
+      <li>Are there any <strong>specific elements you want to mix</strong> — e.g., "Variant C's headline + Variant B's stat strip + Variant A's data cards"? Be specific.</li>
+      <li>For the sections <strong>below the hero</strong> (services, approach, industries, speaking) — do you want them to follow the same posture as the hero, or shift register?</li>
+    </ol>
+  </div>
+</section>
+
+</body>
+</html>
