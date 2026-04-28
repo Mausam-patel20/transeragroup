@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 80" width="220" height="80">
+  <text x="14" y="38" font-family="Manrope, Arial, sans-serif" font-weight="900" font-size="28" fill="#E4002B" letter-spacing="-1">CFIB</text>
+  <line x1="14" y1="44" x2="86" y2="44" stroke="#E4002B" stroke-width="1.5"/>
+  <text x="14" y="58" font-family="Manrope, Arial, sans-serif" font-weight="700" font-size="9" fill="#0B2730" letter-spacing=".5">CANADIAN FEDERATION</text>
+  <text x="14" y="70" font-family="Manrope, Arial, sans-serif" font-weight="700" font-size="9" fill="#0B2730" letter-spacing=".5">OF INDEPENDENT BUSINESS</text>
+</svg>
