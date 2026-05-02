@@ -311,7 +311,7 @@ h1 .accent, h2 .accent, h3 .accent{
 .hero{
   position:relative;
   overflow:hidden;
-  padding: clamp(72px, 11vw, 140px) 0 clamp(96px, 14vw, 160px);
+  padding: clamp(72px, 11vw, 30px) 0 clamp(96px, 14vw, 30px);
   background:
     radial-gradient(1200px 700px at 92% -8%, rgba(15,122,135,.13), transparent 60%),
     radial-gradient(900px 600px at -8% 110%, rgba(11,61,82,.10), transparent 60%),
