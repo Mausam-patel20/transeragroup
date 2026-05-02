@@ -305,6 +305,91 @@ h1 .accent, h2 .accent, h3 .accent{
 .breadcrumb .sep{color:var(--text-4); font-family:"Fraunces", serif;}
 .breadcrumb .here{color:var(--teal); font-weight:600;}
 
+/* =========================================
+   SPEAKING HERO LAYOUT
+========================================= */
+
+.speaking-hero{
+  position: relative;
+  overflow: hidden;
+  min-height: 75vh;
+}
+
+/* =========================
+   IMAGE (RIGHT SIDE BACKGROUND FEEL)
+========================= */
+
+.speaking-hero-image{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.speaking-hero-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* KEY EFFECT: fade from hidden (left) → visible (right) */
+  mask-image: linear-gradient(
+    to right,
+    rgba(0,0,0,0.05) 0%,   /* almost invisible */
+    rgba(0,0,0,0.10) 25%,  /* 10% visibility */
+    rgba(0,0,0,0.25) 55%,
+    rgba(0,0,0,0.55) 75%,
+    rgba(0,0,0,0.85) 85%,
+    rgba(0,0,0,1) 100%     /* full visibility */
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0,0,0,0.05) 0%,
+    rgba(0,0,0,0.10) 25%,
+    rgba(0,0,0,0.25) 55%,
+    rgba(0,0,0,0.55) 75%,
+    rgba(0,0,0,0.85) 85%,
+    rgba(0,0,0,1) 100%
+  );
+
+  transform: scale(1.05);
+}
+
+/* soft overlay so text stays readable */
+.speaking-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+
+  background: linear-gradient(
+    to right,
+    rgba(248,250,251,0.96) 0%,
+    rgba(248,250,251,0.92) 25%,
+    rgba(248,250,251,0.75) 55%,
+    rgba(248,250,251,0.35) 75%,
+    rgba(248,250,251,0.05) 85%,
+    rgba(248,250,251,0) 100%
+  );
+}
+
+/* =========================
+   CONTENT ON TOP
+========================= */
+
+/* .speaking-hero-content{
+  position: relative;
+  z-index: 5;
+  max-width: auto;
+  padding: 120px 0;
+} */
+
+/* push text slightly left for better balance */
+/* .speaking-hero-content{
+  margin-left: 0;
+} */
+
+/* keep your existing typography untouched */
+
 /* =========================================================
    HOMEPAGE HERO
    ========================================================= */
