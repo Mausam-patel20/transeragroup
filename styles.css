@@ -72,7 +72,7 @@ h1,h2,h3,h4,h5{
   color:var(--navy); letter-spacing:-0.025em; line-height:1.1;
   font-weight:700;
 }
-h1{font-size:clamp(40px, 5.6vw, 72px); margin:0 0 .35em; letter-spacing:-0.035em; line-height:1.18;}
+h1{font-size:clamp(40px, 5.6vw, 72px); margin:10 0 .35em; letter-spacing:-0.035em; line-height:1.18;}
 h2{font-size:clamp(30px, 3.8vw, 48px); margin:0 0 .5em; letter-spacing:-0.03em; line-height:1.18;}
 h3{font-size:clamp(20px, 2.1vw, 26px); font-weight:700; margin:0 0 .4em;}
 h4{font-size:18px; font-weight:600; margin:0 0 .4em;}
@@ -311,7 +311,7 @@ h1 .accent, h2 .accent, h3 .accent{
 .hero{
   position:relative;
   overflow:hidden;
-  padding: clamp(52px, 11vw, 20px) 0 clamp(66px, 14vw, 20px);
+  padding: clamp(24px, 11vw, 20px) 0 clamp(66px, 14vw, 20px);
   background:
     radial-gradient(1200px 700px at 92% -8%, rgba(15,122,135,.13), transparent 60%),
     radial-gradient(900px 600px at -8% 110%, rgba(11,61,82,.10), transparent 60%),
