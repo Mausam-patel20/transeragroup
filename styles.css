@@ -2691,7 +2691,7 @@ footer .container{ position:relative; z-index:2;}
 .footer-grid ul li{margin-bottom:11px; font-size:14px;}
 .footer-grid a{color:#cfeff3; transition:color .2s;}
 .footer-grid a:hover{color:var(--gold-light);}
-.footer-logo{ height: 70px; width:auto; margin-bottom:18px; filter: brightness(0) invert(1);}
+.footer-logo{ height: 70px; width:auto; margin-bottom:18px;}
 .footer-about{font-size:14px; color:#a8c8cd; line-height:1.7;}
 .footer-contact{font-size:14px; line-height:1.95;}
 .footer-contact a{display:block;}
