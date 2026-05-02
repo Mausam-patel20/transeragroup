@@ -1,20 +1,765 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Transera group</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Transera Group Ltd. — Owner-side EPCM advisory and project governance for EV charging and electrical infrastructure. Built for fleets, SMEs, OEMs, and public-sector clients across Canada and North America." />
+<meta name="theme-color" content="#0F7A87" />
+<title>Transera Group Ltd. — Electrification Infrastructure Delivered with Clarity, Control & Confidence</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-    <main>
-        <p>This is a basic HTML file structure.</p>
-    </main>
-    <footer>
-        <p>&copy; 2026 Your Name</p>
-    </footer>
+
+<div class="progress-bar" id="progress"></div>
+
+<!-- =====================================================
+     UTILITY BAR
+     ===================================================== -->
+<div class="utility" role="region" aria-label="Top utility bar">
+  <div class="container">
+    <div class="utility-left">
+      <a href="tel:+13657771235" aria-label="Call Transera">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +1 (365) 777-1235
+      </a>
+      <a href="mailto:ceo@transeragroup.com" aria-label="Email Transera">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        ceo@transeragroup.com
+      </a>
+    </div>
+    <div class="utility-right">Serving North America &middot; Selective Global Engagements</div>
+  </div>
+</div>
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+<header class="site-header" id="header">
+  <div class="container">
+    <a href="index.html" class="logo"><img src="assets/logo.png" alt="Transera Group Ltd." class="logo-image"></a>
+    <nav class="nav-main">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="approach.html">Approach</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="tools.html">Insights</a></li>
+        <li><a href="partnerships.html">Partnerships</a></li>
+        <li><a href="investors.html">Investors</a></li>
+        <li><a href="speaking.html">Speaking</a></li>
+        <li><a href="careers.html">Work With Us</a></li>
+        <li><a href="book.html">Book a Call</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </nav>
+    <button class="mobile-toggle" aria-label="Open menu"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header>
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+<section class="hero">
+  <div class="hero-deco-1" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-text">
+      <div class="hero-badge-pill">
+        <span class="pulse" aria-hidden="true"></span>
+        Owner-side advisory &middot; Concept to Commissioning&hellip; and Beyond
+      </div>
+      <div class="clip-embed-frame reveal">
+        <div class="clip-embed-aspect">
+          <iframe src="clip.html" title="Transera Group Ltd. — 25-second brand intro" loading="lazy" allow="autoplay" referrerpolicy="same-origin"></iframe>
+        </div>
+        <!--Test1 <div class="clip-embed-actions">
+          <a href="clip.html" target="_blank" rel="noopener" class="btn btn-cta-gold btn-arrow">Open in Full Screen</a>
+          <button type="button" class="btn-view-sample-report" id="copyClipLinkBtn" data-clip-share>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+            Share Link
+          </button>
+        </div> -->
+      </div>
+      <h1>Owner-side EPCM for electrification &mdash; <span class="accent">engineered, procured, governed, delivered.</span></h1>
+      <p class="hero-subhead">
+        Transera supplements your in-house EPCM capabilities for EV charging and electrical infrastructure programs &mdash; closing capability gaps for fleets, real estate, healthcare, municipal, indigenous, OEM/CPO, and SME clients while protecting your budget and timeline from concept through commissioning.
+      </p>
+      <div class="hero-ctas">
+        <a href="approach.html" class="btn btn-ghost">See Our Approach</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     TRUST STRIP
+     ===================================================== -->
+<section class="trust" aria-label="Track record">
+  <div class="container reveal-stagger">
+    <div class="trust-stat">
+      <div class="trust-num"><span class="counter" data-target="20">0</span><span class="suffix">+</span></div>
+      <div class="trust-label">Years in Power &amp; Capital Infrastructure</div>
+    </div>
+    <div class="trust-stat">
+      <div class="trust-num"><span class="suffix">$</span><span class="counter" data-target="100">0</span><span class="suffix">M+</span></div>
+      <div class="trust-label">Capital Portfolio &amp; Estimating Exposure</div>
+    </div>
+    <div class="trust-stat">
+      <div class="trust-num"><span class="counter" data-target="1500">0</span><span class="suffix">+</span></div>
+      <div class="trust-label">EV Chargers Across 300+ Sites</div>
+    </div>
+    <div class="trust-stat">
+      <div class="trust-num"><span class="counter" data-target="400">0</span><span class="suffix"> kV</span></div>
+      <div class="trust-label">Transmission, Substation &amp; Distribution</div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     INDUSTRY REALITY
+     ===================================================== -->
+<section class="block reality">
+  <div class="container">
+    <div class="reality-grid">
+      <div class="reveal">
+        <p class="eyebrow"><span class="num">01</span>The Reality of Electrification</p>
+        <h2>EV charging infrastructure made simple.</h2>
+        <p class="lead">EV charging sits at the intersection of utility coordination, civil and structural integration, regulatory layering, long-lead procurement, and operational continuity. Transera absorbs that complexity on the Owner&rsquo;s behalf &mdash; turning what could be a tangled multi-discipline program into a simple, structured electrical program with one accountable point of governance.</p>
+        <p style="color:var(--text-2); margin-top:12px; font-style:italic; font-family:'Fraunces',serif; font-size:18px;">Transera delivers vendor-neutral, right-sized advisory — aligned to your operations, your routes, and your capital.</p>
+        <div class="reality-list reveal-stagger">
+          <div class="reality-item"><span class="check">✓</span> Utility &amp; service capacity coordination</div>
+          <div class="reality-item"><span class="check">✓</span> Multi-trade engineering integration</div>
+          <div class="reality-item"><span class="check">✓</span> Civil, structural &amp; electrical interdependencies</div>
+          <div class="reality-item"><span class="check">✓</span> Long-lead equipment &amp; procurement risk</div>
+          <div class="reality-item"><span class="check">✓</span> Permitting &amp; regulatory layers</div>
+          <div class="reality-item"><span class="check">✓</span> Phased capital alignment with real routes</div>
+        </div>
+      </div>
+      <div class="pull-card reveal">
+        <span class="quote-mark">&#8220;</span>
+        <p style="margin-bottom:10px;">The hardest part of electrification is rarely the engineering itself.</p>
+        <p style="margin-bottom:0; font-size:19px;"><strong>Programs succeed through coordination, sequencing, and governance</strong> — the disciplines that protect capital, schedule, and operational continuity from day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     OWNER-SIDE ROLE
+     ===================================================== -->
+<section class="block role">
+  <div class="container">
+    <div class="role-grid">
+      <div class="reveal">
+        <p class="eyebrow"><span class="num">02</span>Our Role</p>
+        <h2>We represent the Owner&rsquo;s interests.</h2>
+        <p class="lead">We collaborate with engineering firms, contractors, OEMs, and utilities — coordinating the full delivery ecosystem on the Owner&rsquo;s side of the table. We structure scope, manage risk, and protect capital through governance, visibility, and disciplined execution.</p>
+        <div class="role-callout">
+          <p>We provide <strong>governance, visibility, and disciplined execution</strong> — right-sized for Owners who value capability-aligned advisory over hyperscale retainers.</p>
+        </div>
+        <div style="margin-top:24px;">
+          <a href="about.html" class="btn btn-ghost btn-arrow">More About Transera</a>
+        </div>
+      </div>
+      <div class="role-card-stack reveal-stagger">
+        <div class="role-card">
+          <div class="role-card-icon">
+            <!-- Handshake / Owner's Representative -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17l3 3 7-7-3-3"/><path d="M2 8l3-3 7 7-3 3z"/><path d="M14 7l-3 3"/><path d="M5 16l3-3"/><path d="M9 21H5a2 2 0 0 1-2-2v-4"/></svg>
+          </div>
+          <div><h4>Owner&rsquo;s Representative</h4><p>Single point of accountability across utilities, designers, OEMs, and constructors — protecting the Owner&rsquo;s commercial and operational interests.</p></div>
+        </div>
+        <div class="role-card">
+          <div class="role-card-icon">
+            <!-- Gears / EPCM Coordination -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <div><h4>EPCM Coordination Lead</h4><p>Engineering, procurement, and construction management oversight — extending support to the design engineer of record and the full delivery team.</p></div>
+        </div>
+        <div class="role-card">
+          <div class="role-card-icon">
+            <!-- Compass / Strategy Advisor -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          </div>
+          <div><h4>Electrification Strategy Advisor</h4><p>Capital planning, fleet transition, load growth, and ESG-aligned roadmaps that turn ambition into structured, executable programs.</p></div>
+        </div>
+        <div class="role-card">
+          <div class="role-card-icon">
+            <!-- Shield with checkmark / Governance -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <div><h4>Infrastructure Governance Partner</h4><p>Risk, change-control, cost, schedule, and benefits-realization disciplines applied throughout the program lifecycle.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     SERVICES — Advisory · EPC · PM (ICONS ABOVE EACH CARD)
+     ===================================================== -->
+<section class="block services-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="num">03</span>Three Service Pillars</p>
+      <h2>Advisory. EPC. Program Management.</h2>
+      <p class="lead" style="margin:0 auto;">From early-stage strategy to disciplined construction delivery and long-term program governance — three service pillars covering the full electrification lifecycle.</p>
+    </div>
+
+    <div class="services-grid reveal-stagger">
+      <div class="service-pillar">
+        <div class="service-pillar-icon">
+          <img src="assets/service-advisory.png" alt="Advisory pillar">
+        </div>
+        <div class="service-card">
+          <div class="service-num">01</div>
+          <span class="service-tag">Advisory</span>
+          <h3>Strategic Advisory</h3>
+          <p class="lead-line">Strategic structuring before engineering, procurement, or construction begins.</p>
+          <ul>
+            <li>Electrification roadmaps &amp; capital strategy</li>
+            <li>Site selection &amp; readiness assessments</li>
+            <li>Utility coordination strategy</li>
+            <li>Business-case modeling &amp; ROI analysis</li>
+            <li>Vendor &amp; OEM evaluation frameworks</li>
+          </ul>
+          <a href="services.html#advisory" class="service-link">Explore advisory</a>
+        </div>
+      </div>
+
+      <div class="service-pillar">
+        <div class="service-pillar-icon">
+          <img src="assets/service-epc.png" alt="EPC pillar">
+        </div>
+        <div class="service-card">
+          <div class="service-num">02</div>
+          <span class="service-tag">EPC</span>
+          <h3>EPC Coordination</h3>
+          <p class="lead-line">Engineering, procurement, and construction management coordination — owner-side oversight throughout.</p>
+          <ul>
+            <li>Engineering coordination via P.Eng partners</li>
+            <li>Procurement &amp; contract management</li>
+            <li>Construction governance &amp; quality oversight</li>
+            <li>Permit procurement &amp; regulatory compliance</li>
+            <li>Commissioning &amp; handover support</li>
+          </ul>
+          <a href="services.html#epc" class="service-link">Explore EPC</a>
+        </div>
+      </div>
+
+      <div class="service-pillar">
+        <div class="service-pillar-icon">
+          <img src="assets/service-pm.png" alt="Program Management pillar">
+        </div>
+        <div class="service-card">
+          <div class="service-num">03</div>
+          <span class="service-tag">PM</span>
+          <h3>Program Management</h3>
+          <p class="lead-line">Multi-site, multi-stakeholder program governance with executive-grade reporting.</p>
+          <ul>
+            <li>Program controls (cost, schedule, risk)</li>
+            <li>Multi-site rollout coordination</li>
+            <li>Stakeholder &amp; executive reporting</li>
+            <li>Change-control governance</li>
+            <li>Operations &amp; asset management</li>
+          </ul>
+          <a href="services.html#pm" class="service-link">Explore PM</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     3Ps PREVIEW
+     ===================================================== -->
+<section class="block threeps">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="num">04</span>The 3Ps Foundation</p>
+      <h2>Three pillars before engineering, procurement, or construction.</h2>
+      <p class="lead" style="margin:0 auto;">Without these aligned, electrification projects drift. The 3Ps ensure every program begins with clarity — not complexity.</p>
+    </div>
+
+    <div class="threeps-grid reveal-stagger">
+      <div class="p-card p1">
+        <span class="p-tag">P1 · Purpose</span>
+        <h3>Why are we electrifying?</h3>
+        <p class="ask">Strategic intent before site work.</p>
+        <ul><li>Fleet transition strategy</li><li>Load growth planning</li><li>ESG &amp; sustainability targets</li><li>Capital allocation priorities</li><li>Long-term asset lifecycle thinking</li></ul>
+        <div class="warn"><strong>Without it:</strong> infrastructure gets overbuilt or underbuilt.</div>
+      </div>
+      <div class="p-card p2">
+        <span class="p-tag">P2 · Planning</span>
+        <h3>How will it be structured?</h3>
+        <p class="ask">Sequencing and scope before procurement.</p>
+        <ul><li>Scope clarity before engineering</li><li>Utility pre-engagement</li><li>Phased capital roadmap</li><li>Risk identification &amp; schedule realism</li><li>Procurement strategy alignment</li></ul>
+        <div class="warn"><strong>Without it:</strong> projects slip and budgets expand.</div>
+      </div>
+      <div class="p-card p3">
+        <span class="p-tag">P3 · Protection</span>
+        <h3>How do we protect outcomes?</h3>
+        <p class="ask">Disciplined execution &amp; benefits realization.</p>
+        <ul><li>Change-control governance</li><li>Cost monitoring discipline</li><li>Contractor accountability</li><li>Quality &amp; risk register oversight</li><li>Benefits-realization tracking</li></ul>
+        <div class="warn"><strong>Without it:</strong> ROI erodes.</div>
+      </div>
+    </div>
+    <p class="threeps-tagline reveal">The 3Ps ensure electrification begins with <em>clarity — not complexity.</em></p>
+    <div style="text-align:center; margin-top:32px;" class="reveal">
+      <a href="approach.html" class="btn btn-ghost btn-arrow">Explore the full approach</a>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     INDUSTRIES PREVIEW — 8 TILES
+     ===================================================== -->
+<section class="block">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="num">05</span>Who We Serve</p>
+      <h2>Programs sized to your context.</h2>
+      <p class="lead" style="margin:0 auto;">From property portfolios to fleets, healthcare campuses to municipal programs, charger OEMs to vehicle manufacturers — owner-side discipline that scales to your industry, footprint, and risk tolerance.</p>
+    </div>
+    <div class="industries-grid reveal-stagger">
+      <a class="ind-card" href="industries.html#fleet">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h4>Fleet &amp; Logistics</h4>
+        <p>Last-mile, regional, and long-haul fleets — depot electrification, route-aligned charging, multi-terminal program rollouts.</p>
+        <div class="ind-link">Explore →</div>
+      </a>
+      <a class="ind-card" href="industries.html#real-estate">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M9 11h.01"/><path d="M15 11h.01"/></svg></div>
+        <h4>Real Estate &amp; REITs</h4>
+        <p>Multi-tenant commercial, office portfolios, and industrial REITs adding tenant-charging amenities &amp; long-term electrification value.</p>
+        <div class="ind-link">Explore →</div>
+      </a>
+      <a class="ind-card" href="industries.html#municipal">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M3 7l9-4 9 4"/><path d="M4 10v11"/><path d="M20 10v11"/><path d="M8 14v7"/><path d="M12 14v7"/><path d="M16 14v7"/></svg></div>
+        <h4>Municipal &amp; Public Sector</h4>
+        <p>Federal, provincial, and municipal clients — public charging, fleet decarbonization, and ESG-aligned capital plans.</p>
+        <div class="ind-link">Explore →</div>
+      </a>
+      <a class="ind-card" href="industries.html#industrial-plaza">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20"/><path d="M3 22V8l5-3 5 3v14"/><path d="M13 22v-9l4-2 4 2v9"/><path d="M7 12h2M7 16h2M16 16h2"/></svg></div>
+        <h4>Industrial &amp; Shopping Plazas</h4>
+        <p>Industrial parks, logistics hubs, and shopping plaza owners electrifying for tenants, fleets, and customer-facing programs.</p>
+        <div class="ind-link">Explore →</div>
+      </a>
+      <a class="ind-card" href="industries.html#oem-cpo">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><line x1="9" y1="8" x2="9" y2="9"/><line x1="15" y1="8" x2="15" y2="9"/><path d="M10 17h4"/><path d="M12 12l-1.5 3h3z"/></svg></div>
+        <h4>OEMs, Vehicle Mfrs, CPOs &amp; EV Platforms</h4>
+        <p>Charger OEMs, vehicle manufacturers, charge-point operators, and EV software platforms — site qualification, deployment governance, customer-success enablement.</p>
+        <div class="ind-link">Explore →</div>
+      </a>
+      <a class="ind-card" href="industries.html#healthcare-education">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h4>Healthcare &amp; Education Campuses</h4>
+        <p>Hospitals, universities, school boards, and college networks electrifying fleet, employee, and visitor charging at campus scale.</p>
+        <div class="ind-link">Explore →</div>
+      </a>
+      <a class="ind-card" href="industries.html#hospitality">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18"/><path d="M3 22h18"/><path d="M5 18V11h14v7"/><path d="M9 11V7a3 3 0 0 1 6 0v4"/><circle cx="12" cy="14" r="1"/></svg></div>
+        <h4>Hospitality &amp; Retail Destinations</h4>
+        <p>Hotels, malls, plazas, and attractions deploying destination charging that drives dwell time and sustainability positioning.</p>
+        <div class="ind-link">Explore →</div>
+      </a>
+      <a class="ind-card" href="industries.html#indigenous-remote">
+        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></div>
+        <h4>Indigenous &amp; Remote Communities</h4>
+        <p>First Nations, northern, and off-grid communities deploying electrification with federal funding and microgrid integration.</p>
+        <div class="ind-link">Explore →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     SPEAKING TEASER — TWO FEATURED ENGAGEMENTS
+     ===================================================== -->
+<section class="block voice">
+  <div class="container">
+    <div class="section-head left reveal">
+      <p class="eyebrow"><span class="num">06</span>Industry Voice</p>
+      <h2>On the industry stage.</h2>
+      <p class="lead">Active panelist, moderator, and speaker contributing to North America&rsquo;s electrification ecosystem — sharing field-tested perspective on owner-side delivery, utility coordination, and capital governance.</p>
+    </div>
+
+    <!-- TWO featured engagements (ACT Expo first per Kapil's prioritization) -->
+    <div class="voice-feature reveal" style="grid-template-columns: 1fr 1fr;">
+      <!-- ACT Expo (LEFT — featured first) -->
+      <div class="feature-card" style="background: linear-gradient(135deg, var(--teal-900) 0%, var(--navy) 60%, var(--teal-800) 100%);">
+        <span class="featured-badge" style="background: var(--gold-light);">Featured &middot; 2026</span>
+        <div class="feature-event" style="font-size:11px;">ACT Expo &middot; Las Vegas Convention Center</div>
+        <div style="font-family:'Fraunces',serif; font-style:italic; font-size:42px; font-weight:600; color:var(--gold-light); line-height:.9; margin-bottom:14px; letter-spacing:-.03em;">May 4&ndash;7</div>
+        <h3 class="feature-title" style="font-size:24px;">Owner&rsquo;s Engineer Approach for EV Charging Program Success</h3>
+        <span class="feature-role"><span class="dot"></span> Speaker &amp; Moderator</span>
+        <p class="feature-desc">How a vendor-neutral EPCM approach puts fleet operators in control &mdash; aligning infrastructure with real routes, phasing capital wisely, and delivering charging programs that perform from day one.</p>
+        <div class="meta">
+          <div><strong>Date</strong>May 5, 2026 &middot; 1:05&ndash;1:15 PM</div>
+          <div><strong>Venue</strong>Expo Hall Theater South</div>
+          <div><strong>Format</strong>Speaking &amp; Moderating</div>
+        </div>
+      </div>
+
+      <!-- EV Charging Summit & Expo (RIGHT) -->
+      <div class="feature-card">
+        <span class="featured-badge">Featured &middot; 2026</span>
+        <div class="feature-event" style="font-size:11px;">EV Charging Summit &amp; Expo &middot; Las Vegas</div>
+        <div style="font-family:'Fraunces',serif; font-style:italic; font-size:42px; font-weight:600; color:var(--gold-light); line-height:.9; margin-bottom:14px; letter-spacing:-.03em;">Mar 17&ndash;19</div>
+        <h3 class="feature-title" style="font-size:24px;">&ldquo;Behind-the-Fence&rdquo; Fleets &mdash; Shop Talk Panel</h3>
+        <span class="feature-role"><span class="dot"></span> Panelist</span>
+        <p class="feature-desc">Peer-to-peer Shop Talk session on private fleet electrification &mdash; joined Cobb County Government / NAFA / Black Fleet Network and Penske Energy. Session ST5.</p>
+        <div class="meta">
+          <div><strong>Date</strong>Wed, Mar 18, 2026</div>
+          <div><strong>Format</strong>Industry Shop Talk</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;" class="reveal">
+      <a href="speaking.html" class="btn btn-primary btn-arrow">View speaking engagements</a>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     COMPLIANCE
+     ===================================================== -->
+<section class="block compliance">
+  <div class="container reveal">
+    <p class="eyebrow"><span class="num" style="color:var(--gold-light);">07</span>Professional Positioning</p>
+    <h2>Owner-side advisory and EPCM coordination — delivered in collaboration with licensed professionals.</h2>
+    <p class="lead">Transera Group Ltd. provides infrastructure strategy, governance frameworks, procurement oversight, construction coordination, and program-management leadership. Where regulated services are required, we collaborate with licensed Professional Engineers and Electrical Contractors engaged directly or in partnership.</p>
+    <div class="compliance-grid reveal-stagger">
+      <div class="comp-card">
+        <h4>What We Provide <span class="badge">Owner-Side</span></h4>
+        <ul>
+          <li>Strategic advisory &amp; electrification roadmaps</li>
+          <li>Owner&rsquo;s representative &amp; EPCM coordination</li>
+          <li>Site readiness assessments &amp; capacity studies</li>
+          <li>Utility coordination &amp; grid-connection strategy</li>
+          <li>Procurement structuring &amp; vendor evaluation</li>
+          <li>Construction governance &amp; quality oversight</li>
+          <li>Commissioning support &amp; operational handover</li>
+          <li>Risk, change-control &amp; benefits-realization frameworks</li>
+        </ul>
+      </div>
+      <div class="comp-card">
+        <h4>Delivered in Collaboration With <span class="badge">Licensed</span></h4>
+        <ul>
+          <li>Licensed Professional Engineers (P.Eng) for sealed engineering</li>
+          <li>Licensed electrical contractors (ECRA/ESA) for regulated work</li>
+          <li>Civil &amp; structural consultants for site integration</li>
+          <li>Geotechnical &amp; environmental specialists</li>
+          <li>Commissioning &amp; testing agencies</li>
+          <li>Charger OEMs &amp; equipment suppliers</li>
+          <li>Local utilities, LDCs, and system operators</li>
+          <li>Municipal &amp; authorities-having-jurisdiction representatives</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     READY TO MOVE FORWARD — TWO-TIER CTA
+     ===================================================== -->
+<section class="block final-cta">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Ready to Move Forward?</p>
+      <h2>Two ways to start a conversation.</h2>
+      <p class="lead" style="margin:0 auto;">Whether you want a quick orientation call or a structured advisory engagement before committing capital — Transera meets you where you are.</p>
+    </div>
+
+    <div class="cta-grid reveal-stagger">
+      <!-- TIER 1: FREE STRATEGY CALL -->
+      <div class="cta-box">
+        <div style="display:inline-block; padding:5px 12px; border-radius:999px; background:rgba(15,122,135,.1); color:var(--teal); font-size:11px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; margin-bottom:14px;">Tier 1 · Complimentary</div>
+        <h3>30-Minute Strategy Call</h3>
+        <p style="margin-bottom:16px; color:var(--text-2);">A no-obligation introduction. Discuss your program, your timing, and whether Transera is a fit.</p>
+        <div style="font-family:'Fraunces',serif; font-style:italic; font-size:32px; font-weight:600; color:var(--teal); line-height:1; margin-bottom:6px;">Complimentary</div>
+        <div style="font-size:12px; color:var(--text-3); letter-spacing:.04em; margin-bottom:24px;">30 minutes &middot; No commitment</div>
+        <p style="font-size:13px; color:var(--text-3); text-transform:uppercase; letter-spacing:.14em; font-weight:700; margin-bottom:10px;">What we&rsquo;ll cover</p>
+        <ul>
+          <li>Your program objectives</li>
+          <li>Where you are in the pathway</li>
+          <li>Initial risks &amp; opportunities</li>
+          <li>Whether Transera fits your context</li>
+          <li>Next-step options</li>
+        </ul>
+        <a href="book.html#complimentary" class="btn btn-primary btn-arrow">Book Complimentary Strategy Call</a>
+      </div>
+
+      <!-- TIER 2: PAID STRATEGIC DISCOVERY -->
+      <div class="cta-box primary">
+        <div style="display:inline-block; padding:5px 12px; border-radius:999px; background:var(--gold); color:var(--navy); font-size:11px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; margin-bottom:14px;">Tier 2 · Featured Advisory</div>
+        <h3>Strategic Discovery Advisory&trade;</h3>
+        <div style="font-family:'Fraunces',serif; font-style:italic; font-size:24px; font-weight:600; color:var(--gold-light); line-height:1.2; margin-bottom:6px; padding-bottom:0.12em;">2 hours of live engagement</div>
+        <div style="font-size:12px; color:#cfeff3; letter-spacing:.04em; margin-bottom:24px;">2 &times; 60 min &middot; HST inclusive &middot; Fee disclosed at checkout</div>
+        <p style="font-size:14px; color:#e6f4f6; line-height:1.65; margin-bottom:18px;">A structured engagement to evaluate readiness <em>before</em> you commit capital. Designed to reduce uncertainty before engineering or procurement decisions.</p>
+        <div style="display:block; padding:14px 18px; background:rgba(255,255,255,.07); border:1px solid rgba(201,169,97,.3); border-radius:10px; text-align:center; margin-bottom:18px;">
+          <div style="font-family:'Fraunces',serif; font-style:italic; font-size:22px; font-weight:600; color:var(--gold-light); line-height:1; margin-bottom:6px;">2 hours of live engagement</div>
+          <div style="font-size:11px; color:#cfeff3; letter-spacing:.08em; text-transform:uppercase; line-height:1.5;">2 &times; 60 min &middot; 1 Strategic Discovery Call<br>+ 1 Detailed Strategy Call <em>(after report submission)</em></div>
+        </div>
+        <p style="font-size:12.5px; color:#cfeff3; line-height:1.55; font-style:italic; font-family:'Fraunces',serif; margin-bottom:18px;">Site visits, travel, and any expanded scope are quoted separately as the engagement evolves.</p>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <a href="book.html#strategic-discovery" class="btn btn-cta-gold btn-arrow" style="flex:1; min-width:160px;">Book Strategic Discovery</a>
+          <a href="book.html#strategic-discovery" class="btn-view-sample-report"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>View Sample Report</a>
+        </div>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:28px; color:var(--text-3); font-size:13px; font-style:italic; font-family:'Fraunces',serif;">Pricing in CAD &middot; All taxes included &middot; Site visits and travel quoted separately if required &middot; PIPEDA-aligned data handling</p>
+  </div>
+</section>
+
+<!-- =====================================================
+     ACTIVE MEMBERSHIPS &amp; INDUSTRY ENGAGEMENT
+     ===================================================== -->
+<section class="assoc">
+  <div class="container">
+    <div class="assoc-label">Active Memberships &amp; Industry Engagement</div>
+    <div class="assoc-grid">
+      <a href="https://www.cfib-fcei.ca" class="assoc-item" target="_blank" rel="noopener" aria-label="CFIB">
+        <img src="assets/associations/cfib.svg" alt="Canadian Federation of Independent Business">
+      </a>
+      <a href="https://emc-mec.ca" class="assoc-item" target="_blank" rel="noopener" aria-label="Electric Mobility Canada">
+        <img src="assets/associations/emc.jpg" alt="Electric Mobility Canada">
+      </a>
+      <a href="https://evsociety.ca" class="assoc-item" target="_blank" rel="noopener" aria-label="Electric Vehicle Society">
+        <img src="assets/associations/evs.png" alt="Electric Vehicle Society">
+      </a>
+      <a href="https://www.oacett.org" class="assoc-item" target="_blank" rel="noopener" aria-label="OACETT">
+        <img src="assets/associations/oacett.png" alt="OACETT — Member, Certified Technician (Electrical)">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" aria-label="Transera Group home">
+          <img src="assets/logo.png" alt="Transera Group" class="footer-logo">
+        </a>
+        <p class="footer-about">Owner-side electrification advisory and EPCM coordination. We provide governance, structure, and disciplined execution for EV charging and electrical infrastructure programs — without competing with engineering firms.</p>
+        <p class="footer-about" style="margin-top:14px; font-size:13px;">Guelph, Ontario · Serving North America</p>
+        <div class="footer-social">
+          <a href="http://linkedin.com/company/transeragroup" target="_blank" rel="noopener" class="footer-social-pill" aria-label="Transera Group on LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span>Transera Group</span>
+          </a>
+          <a href="https://www.linkedin.com/in/kapilpower" target="_blank" rel="noopener" class="footer-social-pill secondary" aria-label="Kapil Shah on LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span>Kapil Shah</span>
+          </a>
+        </div>
+        <div class="footer-ecra-badge" style="display:none;">
+          <img src="assets/ecra-esa-logo-small.png" alt="ECRA/ESA Electrical Contractor Registration" />
+          <div class="feb-text">
+            <strong>ECRA/ESA · Licensed</strong>
+            Licensed Electrical Contractor (Ontario). License # to be updated upon issuance.
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="tools.html">Insights</a></li>
+          <li><a href="partnerships.html">Partnerships</a></li>
+          <li><a href="investors.html">Investors</a></li>
+          <li><a href="speaking.html">Speaking</a></li>
+          <li><a href="careers.html">Work With Us</a></li>
+          <li><a href="book.html">Book a Call</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="clip.html">Brand Clip (25s)</a></li>
+          <li><a href="tools.html">Insights</a></li>
+          <li><a href="speaking.html">Speaking &amp; Panels</a></li>
+          <li><a href="policy.html">Cancellation Policy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+          <li><a href="about.html#sustainability">Sustainability</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <div class="footer-contact">
+          <a href="tel:+13657771235">📞 +1 (365) 777-1235</a>
+          <a href="mailto:ceo@transeragroup.com">✉ ceo@transeragroup.com</a>
+          <a href="https://www.transeragroup.com">🌐 www.transeragroup.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-disclaimer" role="note">
+      <strong>Professional Positioning &amp; Scope Notice:</strong> Transera Group Ltd. is <a style="display:none;">a Licensed Electrical Contractor (ECRA/ESA, Ontario)</a> operating in a deliberately specialised scope &mdash; niche feasibility, commissioning support, and post-energization troubleshooting. Standard installation and high-volume contracting scopes are delivered through Transera&rsquo;s vetted electrical contracting partners. Sealed P.Eng deliverables are delivered through Licensed Professional Engineers retained on a project-by-project basis. Information presented through AI-powered tools is for decision-support purposes only and is not engineering, financial, legal, or tax advice.
+    </div>
+    
+    <!-- ============================================================
+         ECRA/ESA LICENSE DISPLAY — TO ACTIVATE WHEN LICENSE IS ISSUED
+         INSTRUCTIONS:
+           1. Once Transera receives its 7-digit ECRA/ESA license number,
+              uncomment the block below and replace #####-## with the issued number
+           2. Verify display compliance with ESA's licensee marketing guidelines
+              before publishing
+           3. Standard placement is footer + Contact page tile + business cards
+         ============================================================ -->
+    <!--
+    <div class="ecra-strip" style="text-align:center; padding:14px 16px; margin-top:18px; background:rgba(201,169,97,.08); border:1px solid rgba(201,169,97,.25); border-radius:8px;">
+      <span style="font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-light); font-weight:700;">ECRA / ESA Licensed Electrical Contractor</span>
+      <div style="font-size:13px; color:#cfdce1; margin-top:4px;">License #: #####-## &middot; Ontario Electrical Safety Authority</div>
+    </div>
+    -->
+    <div class="footer-bottom">
+      <div>© <span id="yr">2026</span> Transera Group Ltd. All rights reserved.</div>
+      <div>
+        <a href="policy.html" style="color:#7ba0a8; margin-right:18px;">Cancellation Policy</a>
+        <a href="privacy.html" style="color:#7ba0a8; margin-right:18px;">Privacy Policy</a>
+        <a href="terms.html" style="color:#7ba0a8; margin-right:18px;">Terms of Use</a>
+        <a href="accessibility.html" style="color:#7ba0a8;">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="scripts.js"></script>
+<script>
+// Home page — clip share link copy handler
+(function(){
+  var btn = document.getElementById('copyClipLinkBtn');
+  if (!btn) return;
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    var clipUrl = window.location.origin + window.location.pathname.replace(/[^/]*$/, '') + 'clip.html';
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(clipUrl).then(showCopyToast);
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = clipUrl;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); showCopyToast(); } catch(e){}
+      document.body.removeChild(ta);
+    }
+  });
+  function showCopyToast(){
+    var t = document.createElement('div');
+    t.textContent = 'Clip link copied to clipboard';
+    t.style.cssText = 'position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#C9A961;color:#082935;padding:10px 22px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.04em;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,.3);';
+    document.body.appendChild(t);
+    setTimeout(function(){ t.remove(); }, 2400);
+  }
+})();
+</script>
+
+
+<!-- ========================================================
+     COOKIE CONSENT BANNER (PIPEDA + CASL aligned)
+     Self-dismissing; persists choice in localStorage
+     ======================================================== -->
+<div class="cookie-banner" id="cookieBanner" aria-live="polite" aria-atomic="true" hidden>
+  <div class="cookie-banner-inner">
+    <div class="cookie-banner-icon" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="8.5" cy="10.5" r="0.5" fill="currentColor"/><circle cx="14.5" cy="11.5" r="0.5" fill="currentColor"/><circle cx="11" cy="16" r="0.5" fill="currentColor"/><circle cx="15.5" cy="15" r="0.5" fill="currentColor"/></svg>
+    </div>
+    <div class="cookie-banner-text">
+      <strong>Cookies &amp; privacy.</strong>
+      Transera uses essential cookies only &mdash; required for basic site functionality (no advertising or cross-site tracking). See our <a href="privacy.html">Privacy Policy</a> for full details on how we handle personal information.
+    </div>
+    <button type="button" class="cookie-banner-accept" onclick="acceptCookieBanner()">Got it</button>
+  </div>
+</div>
+<script>
+(function(){
+  function showCookieBanner(){
+    try {
+      if (localStorage.getItem('transera_cookie_ack') === '1') return;
+    } catch(e) { /* localStorage unavailable */ }
+    var banner = document.getElementById('cookieBanner');
+    if (banner) {
+      banner.hidden = false;
+      setTimeout(function(){ banner.classList.add('cookie-banner-visible'); }, 100);
+    }
+  }
+  window.acceptCookieBanner = function(){
+    try { localStorage.setItem('transera_cookie_ack', '1'); } catch(e){}
+    var banner = document.getElementById('cookieBanner');
+    if (banner) {
+      banner.classList.remove('cookie-banner-visible');
+      setTimeout(function(){ banner.hidden = true; }, 350);
+    }
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', showCookieBanner);
+  } else {
+    showCookieBanner();
+  }
+})();
+</script>
+
+<!-- COOKIE CONSENT BANNER (PIPEDA + AODA-compliant) -->
+<div class="cookie-consent-banner" id="cookieConsent" role="dialog" aria-labelledby="ccbTitle" aria-describedby="ccbText">
+  <div class="ccb-icon" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="8.5" cy="8.5" r="1"/><circle cx="15.5" cy="8.5" r="1"/><circle cx="11" cy="14.5" r="1"/><circle cx="15.5" cy="13.5" r="1"/></svg>
+  </div>
+  <div class="ccb-text">
+    <strong id="ccbTitle">This site uses cookies.</strong>
+    <span id="ccbText">Transera uses essential cookies to operate the site, and optional analytics cookies to understand how it&rsquo;s used. Read our <a href="privacy.html">Privacy Policy</a> for details on how we handle data under PIPEDA.</span>
+  </div>
+  <div class="ccb-actions">
+    <button type="button" class="ccb-btn ccb-btn-ghost" onclick="dismissCookieBanner('essential')">Essential only</button>
+    <button type="button" class="ccb-btn ccb-btn-primary" onclick="dismissCookieBanner('all')">Accept all</button>
+  </div>
+</div>
+<script>
+(function(){
+  function showBanner(){
+    try {
+      if (localStorage.getItem('transera_cookie_consent')) return;
+    } catch(e) {}
+    var b = document.getElementById('cookieConsent');
+    if (b) b.classList.add('show');
+  }
+  window.dismissCookieBanner = function(level){
+    try {
+      localStorage.setItem('transera_cookie_consent', level);
+      localStorage.setItem('transera_cookie_consent_date', new Date().toISOString());
+    } catch(e) {}
+    var b = document.getElementById('cookieConsent');
+    if (b) b.classList.remove('show');
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', showBanner);
+  } else {
+    showBanner();
+  }
+})();
+</script>
 </body>
 </html>
