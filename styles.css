@@ -6343,8 +6343,10 @@ footer .container{ position:relative; z-index:2;}
   justify-content: center;
 }
 .clip-embed-frame{
-  max-width: auto;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 .clip-embed-aspect{
   position: relative;
