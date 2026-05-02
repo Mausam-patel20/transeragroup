@@ -345,7 +345,7 @@ h1 .accent, h2 .accent, h3 .accent{
 }
 @keyframes rotate{ to { transform: rotate(360deg); }}
 
-.hero .container{position:relative; display:grid; grid-template-columns: 1.15fr .85fr; gap: clamp(40px, 6vw, 88px); align-items:center; z-index:2;}
+.hero .container{position:relative; gap: clamp(40px, 6vw, 88px); align-items:center; z-index:2;}
 @media (max-width: 1024px){ .hero .container{grid-template-columns:1fr;} }
 
 .hero-badge-pill{
