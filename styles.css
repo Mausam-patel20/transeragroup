@@ -72,7 +72,7 @@ h1,h2,h3,h4,h5{
   color:var(--navy); letter-spacing:-0.025em; line-height:1.1;
   font-weight:700;
 }
-h1{font-size:clamp(40px, 5.6vw, 72px); margin:0 0 .35em; letter-spacing:-0.035em; line-height:1.18;}
+h1{font-size:clamp(40px, 5.6vw, 72px); margin:10 0 .35em; letter-spacing:-0.035em; line-height:1.18;}
 h2{font-size:clamp(30px, 3.8vw, 48px); margin:0 0 .5em; letter-spacing:-0.03em; line-height:1.18;}
 h3{font-size:clamp(20px, 2.1vw, 26px); font-weight:700; margin:0 0 .4em;}
 h4{font-size:18px; font-weight:600; margin:0 0 .4em;}
@@ -250,6 +250,42 @@ h1 .accent, h2 .accent, h3 .accent{
   .mobile-toggle{display:block;}
 }
 
+@media (max-width: 900px){
+
+  .nav-main{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: var(--bg);
+    z-index: 9999;
+    padding: 100px 30px;
+
+    display: block !important; /* IMPORTANT FIX */
+    transition: right 0.3s ease;
+  }
+
+  .nav-main.open{
+    right: 0;
+  }
+
+  .nav-main ul{
+    display: flex !important;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav-main li{
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .nav-main a{
+    font-size: 18px;
+    display: block;
+  }
+}
 /* =========================================================
    PAGE HERO (used on inner pages)
    ========================================================= */
@@ -305,13 +341,98 @@ h1 .accent, h2 .accent, h3 .accent{
 .breadcrumb .sep{color:var(--text-4); font-family:"Fraunces", serif;}
 .breadcrumb .here{color:var(--teal); font-weight:600;}
 
+/* =========================================
+   SPEAKING HERO LAYOUT
+========================================= */
+
+.speaking-hero{
+  position: relative;
+  overflow: hidden;
+  min-height: 75vh;
+}
+
+/* =========================
+   IMAGE (RIGHT SIDE BACKGROUND FEEL)
+========================= */
+
+.speaking-hero-image{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.speaking-hero-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* KEY EFFECT: fade from hidden (left) → visible (right) */
+  mask-image: linear-gradient(
+    to right,
+    rgba(0,0,0,0.05) 10%,   /* almost invisible */
+    rgba(0,0,0,0.10) 25%,  /* 10% visibility */
+    rgba(0,0,0,0.25) 55%,
+    rgba(0,0,0,0.55) 75%,
+    rgba(0,0,0,0.65) 85%,
+    rgba(0,0,0,0.75) 100%     /* full visibility */
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0,0,0,0.05) 10%,
+    rgba(0,0,0,0.10) 25%,
+    rgba(0,0,0,0.25) 55%,
+    rgba(0,0,0,0.55) 75%,
+    rgba(0,0,0,0.65) 85%,
+    rgba(0,0,0,0.75) 100%
+  );
+
+  transform: scale(1.05);
+}
+
+/* soft overlay so text stays readable */
+.speaking-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+
+  background: linear-gradient(
+    to right,
+    rgba(248,250,251,0.96) 10%,
+    rgba(248,250,251,0.92) 25%,
+    rgba(248,250,251,0.75) 55%,
+    rgba(248,250,251,0.35) 75%,
+    rgba(248,250,251,0.05) 85%,
+    rgba(248,250,251,0) 110%
+  );
+}
+
+/* =========================
+   CONTENT ON TOP
+========================= */
+
+/* .speaking-hero-content{
+  position: relative;
+  z-index: 5;
+  max-width: auto;
+  padding: 120px 0;
+} */
+
+/* push text slightly left for better balance */
+/* .speaking-hero-content{
+  margin-left: 0;
+} */
+
+/* keep your existing typography untouched */
+
 /* =========================================================
    HOMEPAGE HERO
    ========================================================= */
 .hero{
   position:relative;
   overflow:hidden;
-  padding: clamp(52px, 11vw, 20px) 0 clamp(66px, 14vw, 20px);
+  padding: clamp(24px, 11vw, 20px) 0 clamp(66px, 14vw, 20px);
   background:
     radial-gradient(1200px 700px at 92% -8%, rgba(15,122,135,.13), transparent 60%),
     radial-gradient(900px 600px at -8% 110%, rgba(11,61,82,.10), transparent 60%),
@@ -1285,36 +1406,40 @@ a.service-card h3, a.service-card p, a.service-card .lead-line{color:inherit;}
   .industry-detail{grid-template-columns:1fr; direction:ltr;}
 }
 .industry-image{
-  position:relative;
+  position: relative;
   aspect-ratio: 4/3;
-  border-radius:var(--radius-lg);
-  overflow:hidden;
-  background: linear-gradient(135deg, #f4f8fa 0%, #e8f1f3 100%);
-  border:1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
   box-shadow: var(--shadow-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.industry-image svg{
+
+.industry-image img{
   width: 100%;
   height: 100%;
+  object-fit: cover;
   display: block;
 }
+
 .industry-image .label{
-  position:absolute; left:18px; top:16px; z-index:2;
+  position:absolute;
+  left:18px;
+  top:16px;
+  z-index:2;
   font-family:"Manrope", sans-serif;
-  font-size:11px; line-height:1;
+  font-size:11px;
+  line-height:1;
   font-weight:800;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--teal);
-  background: rgba(255,255,255,.85);
-  backdrop-filter: blur(6px);
-  padding: 6px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(15,122,135,.18);
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--teal);
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(6px);
+  padding:6px 12px;
+  border-radius:999px;
+  border:1px solid rgba(15,122,135,.18);
 }
+
 .industry-content h3{font-size:32px; margin-bottom:16px;}
 .industry-content .industry-eyebrow{
   display:inline-block;
@@ -6343,8 +6468,10 @@ footer .container{ position:relative; z-index:2;}
   justify-content: center;
 }
 .clip-embed-frame{
-  max-width: auto;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 .clip-embed-aspect{
   position: relative;
