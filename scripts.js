@@ -90,11 +90,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // ----- Mobile menu toggle (visual only — full menu can be added later) -----
   const mobileToggle = document.querySelector('.mobile-toggle');
-  if (mobileToggle) {
-    mobileToggle.addEventListener('click', () => {
-      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
-      mobileToggle.setAttribute('aria-expanded', !expanded);
-      // For now, scrolls to nav links section. WordPress menu plugin will handle this fully.
+  const nav = document.querySelector('.nav-main');
+  
+  if (mobileToggle && nav) {
+  
+    function closeMenu() {
+      nav.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+    }
+  
+    function openMenu() {
+      nav.classList.add('open');
+      document.body.classList.add('menu-open');
+      mobileToggle.setAttribute('aria-expanded', 'true');
+    }
+  
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+  
+      const isOpen = nav.classList.contains('open');
+  
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+  
+    // close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !mobileToggle.contains(e.target)) {
+        closeMenu();
+      }
+    });
+  
+    // close when clicking a link
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
     });
   }
 

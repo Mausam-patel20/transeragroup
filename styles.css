@@ -250,6 +250,42 @@ h1 .accent, h2 .accent, h3 .accent{
   .mobile-toggle{display:block;}
 }
 
+@media (max-width: 900px){
+
+  .nav-main{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: var(--bg);
+    z-index: 9999;
+    padding: 100px 30px;
+
+    display: block !important; /* IMPORTANT FIX */
+    transition: right 0.3s ease;
+  }
+
+  .nav-main.open{
+    right: 0;
+  }
+
+  .nav-main ul{
+    display: flex !important;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav-main li{
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .nav-main a{
+    font-size: 18px;
+    display: block;
+  }
+}
 /* =========================================================
    PAGE HERO (used on inner pages)
    ========================================================= */
@@ -333,22 +369,22 @@ h1 .accent, h2 .accent, h3 .accent{
   /* KEY EFFECT: fade from hidden (left) → visible (right) */
   mask-image: linear-gradient(
     to right,
-    rgba(0,0,0,0.05) 0%,   /* almost invisible */
+    rgba(0,0,0,0.05) 10%,   /* almost invisible */
     rgba(0,0,0,0.10) 25%,  /* 10% visibility */
     rgba(0,0,0,0.25) 55%,
     rgba(0,0,0,0.55) 75%,
-    rgba(0,0,0,0.85) 85%,
-    rgba(0,0,0,1) 100%     /* full visibility */
+    rgba(0,0,0,0.65) 85%,
+    rgba(0,0,0,0.75) 100%     /* full visibility */
   );
 
   -webkit-mask-image: linear-gradient(
     to right,
-    rgba(0,0,0,0.05) 0%,
+    rgba(0,0,0,0.05) 10%,
     rgba(0,0,0,0.10) 25%,
     rgba(0,0,0,0.25) 55%,
     rgba(0,0,0,0.55) 75%,
-    rgba(0,0,0,0.85) 85%,
-    rgba(0,0,0,1) 100%
+    rgba(0,0,0,0.65) 85%,
+    rgba(0,0,0,0.75) 100%
   );
 
   transform: scale(1.05);
@@ -363,12 +399,12 @@ h1 .accent, h2 .accent, h3 .accent{
 
   background: linear-gradient(
     to right,
-    rgba(248,250,251,0.96) 0%,
+    rgba(248,250,251,0.96) 10%,
     rgba(248,250,251,0.92) 25%,
     rgba(248,250,251,0.75) 55%,
     rgba(248,250,251,0.35) 75%,
     rgba(248,250,251,0.05) 85%,
-    rgba(248,250,251,0) 100%
+    rgba(248,250,251,0) 110%
   );
 }
 
