@@ -88,47 +88,42 @@ document.addEventListener('DOMContentLoaded', function() {
     toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
 
-  // ----- Mobile menu toggle -----
+  // ----- Mobile menu toggle (visual only — full menu can be added later) -----
   const mobileToggle = document.querySelector('.mobile-toggle');
   const nav = document.querySelector('.nav-main');
-  const navBackdrop = document.querySelector('.nav-main-backdrop');
-  const mobileClose = document.querySelector('.mobile-close');
   
   if (mobileToggle && nav) {
   
     function closeMenu() {
       nav.classList.remove('open');
-      if (navBackdrop) navBackdrop.classList.remove('open');
       document.body.classList.remove('menu-open');
       mobileToggle.setAttribute('aria-expanded', 'false');
     }
   
     function openMenu() {
       nav.classList.add('open');
-      if (navBackdrop) navBackdrop.classList.add('open');
       document.body.classList.add('menu-open');
       mobileToggle.setAttribute('aria-expanded', 'true');
     }
   
     mobileToggle.addEventListener('click', (e) => {
       e.stopPropagation();
-      const isOpen = nav.classList.contains('open');
-      if (isOpen) closeMenu(); else openMenu();
-    });
-
-    if (mobileClose) {
-      mobileClose.addEventListener('click', (e) => {
-        e.stopPropagation();
-        closeMenu();
-      });
-    }
   
-    if (navBackdrop) {
-      navBackdrop.addEventListener('click', (e) => {
-        e.stopPropagation();
+      const isOpen = nav.classList.contains('open');
+  
+      if (isOpen) {
         closeMenu();
-      });
-    }
+      } else {
+        openMenu();
+      }
+    });
+  
+    // close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !mobileToggle.contains(e.target)) {
+        closeMenu();
+      }
+    });
   
     // close when clicking a link
     nav.querySelectorAll('a').forEach(link => {
