@@ -872,51 +872,73 @@
 
 <footer>
   <div class="container">
-    <!-- Main Top Row: Brand and Contact inline -->
-    <div class="footer-grid" style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <div class="footer-grid" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; align-items: start;">
       
-      <div class="footer-left" style="display: flex; align-items: center; gap: 25px;">
+      <!-- Brand & About Column -->
+      <div class="footer-brand">
         <a href="index.html" aria-label="Transera Group home">
-          <img src="assets/logo.png" alt="Transera Group" class="footer-logo" style="max-height: 45px;">
+          <img src="assets/logo.png" alt="Transera Group" class="footer-logo" style="max-height: 60px;">
         </a>
-        <p class="footer-about" style="max-width: 400px; margin: 0; font-size: 14px; line-height: 1.4;">
-          Owner-side electrification advisory and EPCM coordination for North America.
+        <p class="footer-about" style="max-width: 320px; line-height: 1.5;">
+          Owner-side electrification advisory and EPCM coordination. We provide disciplined execution for EV programs without competing with engineering firms.
         </p>
+        <p style="font-size: 13px; opacity: 0.8;">Guelph, Ontario · Serving North America</p>
+        
+        <div class="footer-social" style="display: flex; gap: 10px; margin-top: 15px;">
+          <a href="http://linkedin.com/company/transeragroup" class="footer-social-pill">
+             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+             <span>Transera</span>
+          </a>
+        </div>
+        <!-- <div class="footer-ecra-badge">
+          <img src="assets/ecra-esa-logo-small.png" alt="ECRA/ESA Electrical Contractor Registration" />
+          <div class="feb-text">
+            <strong>ECRA/ESA · Licensed</strong>
+            Licensed Electrical Contractor (Ontario). License # to be updated upon issuance.
+          </div>
+        </div> -->
       </div>
 
-      <div class="footer-right" style="text-align: right;">
-        <div class="footer-contact" style="display: flex; gap: 20px; font-size: 14px;">
+      <!-- Links Column (Split into 2 sub-columns to save vertical space) -->
+      <div>
+        <h5>Explore</h5>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="approach.html">Approach</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="tools.html">Insights</a></li>
+          </ul>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li><a href="partnerships.html">Partners</a></li>
+            <li><a href="investors.html">Investors</a></li>
+            <li><a href="speaking.html">Speaking</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact Column -->
+      <div>
+        <h5>Contact</h5>
+        <div class="footer-contact" style="display: flex; flex-direction: column; gap: 12px;">
           <a href="tel:+13657771235" style="text-decoration: none;">📞 +1 (365) 777-1235</a>
           <a href="mailto:ceo@transeragroup.com" style="text-decoration: none;">✉ ceo@transeragroup.com</a>
+          <a href="book.html" class="cta-link" style="font-weight: bold; color: var(--gold-light);">📅 Book a Call</a>
         </div>
       </div>
     </div>
 
-    <!-- Secondary Row: Navigation Links all on one line -->
-    <div class="footer-nav-row" style="padding: 15px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-      <nav style="display: flex; gap: 18px; flex-wrap: wrap;">
-        <a href="about.html" style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">About</a>
-        <a href="services.html" style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Services</a>
-        <a href="approach.html" style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Approach</a>
-        <a href="industries.html" style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Industries</a>
-        <a href="tools.html" style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Insights</a>
-        <a href="book.html" style="font-size: 13px; font-weight: 600; text-transform: uppercase; color: #c9a961;">Book a Call</a>
-      </nav>
-      
-      <div class="footer-social-mini" style="display: flex; gap: 12px;">
-         <a href="http://linkedin.com/company/transeragroup" aria-label="LinkedIn" style="opacity: 0.8;">
-           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-         </a>
-      </div>
-    </div>
-
-    <!-- Bottom Bar: Legal -->
-    <div class="footer-bottom" style="font-size: 11px; opacity: 0.6; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px;">
+    <div class="footer-bottom" style="display: flex; justify-content: space-between; font-size: 12px; opacity: 0.7;">
       <div>© 2026 Transera Group Ltd.</div>
       <div style="display: flex; gap: 15px;">
+        <a href="policy.html">Cancellation</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
         <a href="accessibility.html">Accessibility</a>
+        <a href="about.html#sustainability">Sustainability</a>
       </div>
     </div>
   </div>
