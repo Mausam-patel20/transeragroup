@@ -274,18 +274,18 @@ function closeSampleReportModal(){
 document.addEventListener('keydown', function(e){
   if(e.key === 'Escape') closeSampleReportModal();
 });
-document.addEventListener('DOMContentLoaded', function(){
-  document.querySelectorAll('[data-sda-sample-trigger]').forEach(function(el){
-    el.addEventListener('click', function(e){ e.preventDefault(); openSampleReportModal(); });
-  });
-  // Stripe placeholder click handler — shows informational alert until real link is wired
-  document.querySelectorAll('[data-stripe-placeholder]').forEach(function(el){
-    el.addEventListener('click', function(e){
-      e.preventDefault();
-      alert('Stripe payment integration is being finalised. Until activation, please book a complimentary 30-minute call to discuss the Strategic Discovery Advisory engagement, or email ceo@transeragroup.com directly.\n\nThis link will activate the moment Stripe is live.');
-    });
-  });
-});
+// document.addEventListener('DOMContentLoaded', function(){
+//   document.querySelectorAll('[data-sda-sample-trigger]').forEach(function(el){
+//     el.addEventListener('click', function(e){ e.preventDefault(); openSampleReportModal(); });
+//   });
+//   // Stripe placeholder click handler — shows informational alert until real link is wired
+//   document.querySelectorAll('[data-stripe-placeholder]').forEach(function(el){
+//     el.addEventListener('click', function(e){
+//       e.preventDefault();
+//       alert('Stripe payment integration is being finalised. Until activation, please book a complimentary 30-minute call to discuss the Strategic Discovery Advisory engagement, or email ceo@transeragroup.com directly.\n\nThis link will activate the moment Stripe is live.');
+//     });
+//   });
+// });
 </script>
 
 
