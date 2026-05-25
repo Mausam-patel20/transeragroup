@@ -1478,8 +1478,11 @@ a.service-card h3, a.service-card p, a.service-card .lead-line{color:inherit;}
   pointer-events:none;
 }
 .voice-feature{
-  display:grid; grid-template-columns: 1.05fr .95fr; gap:36px;
-  align-items:stretch; margin-bottom: 56px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:36px;
+  align-items:stretch; 
+  margin-bottom: 56px;
 }
 @media (max-width: 940px){.voice-feature{grid-template-columns:1fr;}}
 .feature-card{
