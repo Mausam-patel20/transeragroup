@@ -251,16 +251,22 @@
 
 <footer>
   <div class="container">
-    <div class="footer-grid">
-      <div><a href="index.html"><img src="assets/logo.png" alt="Transera" class="footer-logo"></a><p class="footer-about">Owner-side electrification advisory and EPCM coordination.</p><p class="footer-about" style="margin-top:14px; font-size:13px;">Guelph, Ontario · Serving North America</p>
-        <div class="footer-social">
-          <a href="http://linkedin.com/company/transeragroup" target="_blank" rel="noopener" class="footer-social-pill" aria-label="Transera Group on LinkedIn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            <span>Transera Group</span>
-          </a>
-          <a href="https://www.linkedin.com/in/kapilpower" target="_blank" rel="noopener" class="footer-social-pill secondary" aria-label="Kapil Shah on LinkedIn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            <span>Kapil Shah</span>
+    <div class="footer-grid" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; align-items: start;">
+      
+      <!-- Brand & About Column -->
+      <div class="footer-brand">
+        <a href="index.html" aria-label="Transera Group home">
+          <img src="assets/logo.png" alt="Transera Group" class="footer-logo" style="max-height: 60px;">
+        </a>
+        <p class="footer-about" style="max-width: 320px; line-height: 1.5;">
+          Owner-side electrification advisory and EPCM coordination. We provide disciplined execution for EV programs without competing with engineering firms.
+        </p>
+        <p style="font-size: 13px; opacity: 0.8;">Guelph, Ontario · Serving North America</p>
+        
+        <div class="footer-social" style="display: flex; gap: 10px; margin-top: 15px;">
+          <a href="http://linkedin.com/company/transeragroup" class="footer-social-pill">
+             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+             <span>Transera</span>
           </a>
         </div>
         <!-- <div class="footer-ecra-badge">
@@ -271,13 +277,52 @@
           </div>
         </div> -->
       </div>
-      <div><h5>Explore</h5><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="approach.html">Approach</a></li><li><a href="industries.html">Industries</a></li><li><a href="tools.html">Insights</a></li><li><a href="partnerships.html">Partnerships</a></li><li><a href="investors.html">Investors</a></li><li><a href="speaking.html">Speaking</a></li><li><a href="careers.html">Work With Us</a></li><li><a href="book.html">Book a Call</a></li>
-        <li><a href="contact.html">Contact us</a></li></ul></div>
-      <div><h5>Resources</h5><ul><li><a href="tools.html">Insights</a></li><li><a href="speaking.html">Speaking &amp; Panels</a></li><li><a href="clip.html">Brand Clip (25s)</a></li><li><a href="policy.html">Cancellation Policy</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="accessibility.html">Accessibility</a></li><li><a href="about.html#sustainability">Sustainability</a></li></ul></div>
-      <div><h5>Contact</h5><div class="footer-contact"><a href="tel:+13657771235">📞 +1 (365) 777-1235</a><a href="mailto:ceo@transeragroup.com">✉ ceo@transeragroup.com</a><a href="https://www.transeragroup.com">🌐 www.transeragroup.com</a></div></div>
+
+      <!-- Links Column (Split into 2 sub-columns to save vertical space) -->
+      <div>
+        <h5>Explore</h5>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="approach.html">Approach</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="tools.html">Insights</a></li>
+          </ul>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li><a href="partnerships.html">Partners</a></li>
+            <li><a href="investors.html">Investors</a></li>
+            <li><a href="speaking.html">Speaking</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact Column -->
+      <div>
+        <h5>Contact</h5>
+        <div class="footer-contact" style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="tel:+13657771235" style="text-decoration: none;">📞 +1 (365) 777-1235</a>
+          <a href="mailto:ceo@transeragroup.com" style="text-decoration: none;">✉ ceo@transeragroup.com</a>
+          <a href="book.html" class="cta-link" style="font-weight: bold; color: var(--gold-light);">📅 Book a Call</a>
+        </div>
+        <h5 style="margin-top: 20px;" >ECRA/ESA #7018890</h5>
+      </div>
     </div>
-    <div class="footer-disclaimer"><strong>Professional Positioning:</strong> Transera Group Ltd. is <a style="display:none;">a Licensed Electrical Contractor (ECRA/ESA, Ontario)</a> operating in a deliberately specialised scope &mdash; niche feasibility, commissioning support, and post-energization troubleshooting. Standard installation and high-volume contracting scopes are delivered through Transera&rsquo;s vetted electrical contracting partners. Sealed P.Eng deliverables are delivered through Licensed Professional Engineers retained on a project-by-project basis.</div>
-    
+
+    <div class="footer-bottom" style="display: flex; justify-content: space-between; font-size: 12px; opacity: 0.7;">
+      <div>© 2026 Transera Group Ltd.</div>
+      <div style="display: flex; gap: 15px;">
+        <a href="policy.html">Cancellation</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="about.html#sustainability">Sustainability</a>
+      </div>
+    </div>
+  </div>
+</footer>
     <div class="footer-bottom"><div>© <span id="yr">2026</span> Transera Group Ltd.</div><div><a href="policy.html" style="color:#7ba0a8;">Cancellation Policy</a> &middot; <a href="privacy.html" style="color:#7ba0a8;">Privacy</a> &middot; <a href="terms.html" style="color:#7ba0a8;">Terms</a> &middot; <a href="accessibility.html" style="color:#7ba0a8;">Accessibility</a></div></div>
   </div>
 </footer>
