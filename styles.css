@@ -2752,7 +2752,6 @@ a.service-card h3, a.service-card p, a.service-card .lead-line{color:inherit;}
    .stop-industry { font-size: 11px; color: var(--text-3); text-transform: uppercase; margin-top: 2px; }
    .stop-icon { width: 24px; height: 24px; margin-top: 8px; }
    
-   .stop-content-bottom { text-align: left; background: var(--surface); padding: 14px; border-radius: 8px; border-left: 3px solid var(--teal); font-size: 12.5px; line-height: 1.4; color: var(--text-2); }
    .stop-achievement strong { color: var(--text); }
    
    /* Desktop Highlight Boxes */
