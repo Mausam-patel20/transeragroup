@@ -1479,7 +1479,7 @@ a.service-card h3, a.service-card p, a.service-card .lead-line{color:inherit;}
 }
 .voice-feature{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap:36px;
   align-items:stretch; 
   margin-bottom: 56px;
