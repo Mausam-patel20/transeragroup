@@ -1894,7 +1894,7 @@ a.service-card h3, a.service-card p, a.service-card .lead-line{color:inherit;}
 }
 .assoc-grid{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: clamp(16px, 2vw, 28px);
   align-items:center;
   max-width: 920px;
