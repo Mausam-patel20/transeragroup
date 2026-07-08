@@ -565,6 +565,91 @@
   </div>
 </section>
 
+<!-- MEMBERSHIP SLIDESHOW GALLERY -->
+    <section class="membership-gallery">
+      <div class="container">
+        <div class="gallery" id="membershipGallery" aria-roledescription="carousel">
+          <div class="gallery-viewport">
+            <img src="assets/Membership_Images/GCC Sponsorship 01 2026.png" class="slide" alt="GCC Sponsorship 01">
+            <img src="assets/Membership_Images/GCC Sponsorship 02 2026.png" class="slide" alt="GCC Sponsorship 02">
+            <img src="assets/Membership_Images/GCC Sponsorship 03 2026.jpg" class="slide" alt="GCC Sponsorship 03">
+          </div>
+          <button class="gallery-btn prev" aria-label="Previous slide">‹</button>
+          <button class="gallery-btn next" aria-label="Next slide">›</button>
+          <div class="gallery-dots" aria-hidden="false"></div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+    .membership-gallery { padding: 30px 0; }
+    .gallery { position: relative; max-width: 800px; margin: 0 auto; }
+    :root { --gallery-height: 640px; }
+    .gallery-viewport { position: relative; overflow: hidden; height: var(--gallery-height); }
+    .gallery-viewport .slide { width: 100%; height: var(--gallery-height); display: none; object-fit: cover; object-position: center; }
+    .gallery-viewport .slide.active { display: block; }
+    .gallery-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; padding: 8px 12px; cursor: pointer; font-size: 24px; }
+    .gallery-btn.prev { left: 6px; }
+    .gallery-btn.next { right: 6px; }
+    .gallery-dots { text-align: center; margin-top: 10px; }
+    .gallery-dots button { background: #ddd; border: none; width: 10px; height: 10px; border-radius: 50%; margin: 0 4px; display: inline-block; cursor: pointer; }
+    .gallery-dots button.active { background: #333; }
+    @media (max-width:600px){ .gallery-btn{ font-size:20px; padding:6px 8px; } }
+    </style>
+
+    <script>
+    (function(){
+      var gallery = document.getElementById('membershipGallery');
+      if(!gallery) return;
+      var slides = gallery.querySelectorAll('.slide');
+      var dotsWrap = gallery.querySelector('.gallery-dots');
+      var prev = gallery.querySelector('.prev');
+      var next = gallery.querySelector('.next');
+      var current = 0;
+      var interval = 4000;
+      var timer;
+
+      function renderDots(){
+        slides.forEach(function(_,i){
+          var btn = document.createElement('button');
+          btn.setAttribute('aria-label','Go to slide '+(i+1));
+          btn.addEventListener('click',function(){ goTo(i); });
+          dotsWrap.appendChild(btn);
+        });
+        updateDots();
+      }
+
+      function updateDots(){
+        var dots = dotsWrap.querySelectorAll('button');
+        dots.forEach(function(d,i){ d.classList.toggle('active', i===current); });
+      }
+
+      function show(n){
+        slides.forEach(function(s,i){ s.classList.toggle('active', i===n); });
+        current = n;
+        updateDots();
+      }
+
+      function nextSlide(){ show((current+1) % slides.length); }
+      function prevSlide(){ show((current-1+slides.length) % slides.length); }
+      function goTo(n){ show(n); resetTimer(); }
+
+      prev.addEventListener('click', function(e){ e.preventDefault(); prevSlide(); });
+      next.addEventListener('click', function(e){ e.preventDefault(); nextSlide(); });
+
+      function startTimer(){ timer = setInterval(nextSlide, interval); }
+      function stopTimer(){ clearInterval(timer); }
+      function resetTimer(){ stopTimer(); startTimer(); }
+
+      gallery.addEventListener('mouseenter', stopTimer);
+      gallery.addEventListener('mouseleave', startTimer);
+
+      renderDots();
+      show(0);
+      startTimer();
+    })();
+    </script>
+
 <!-- =====================================================
      FOOTER
      ===================================================== -->
