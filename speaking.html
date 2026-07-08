@@ -138,6 +138,108 @@
   </div>
 </section>
 
+
+    <!-- SPEAKING IMAGES SLIDESHOW GALLERY -->
+    <section class="speaking-gallery">
+      <div class="container">
+        <div class="gallery" id="speakingGallery" aria-roledescription="carousel">
+          <div class="gallery-viewport">
+            <img src="assets/Speaking_Images/ACT Expo 01 05042026.jpeg" class="slide" alt="ACT Expo 01">
+            <img src="assets/Speaking_Images/ACT Expo 02 05042026.jpeg" class="slide" alt="ACT Expo 02">
+            <img src="assets/Speaking_Images/ACT Expo 03 05042026.jpeg" class="slide" alt="ACT Expo 03">
+            <img src="assets/Speaking_Images/ACT Expo 04 05042026.jpeg" class="slide" alt="ACT Expo 04">
+            <img src="assets/Speaking_Images/CHCC 01 06092026.jpeg" class="slide" alt="CHCC 01">
+            <img src="assets/Speaking_Images/CHCC 02 06092026.jpeg" class="slide" alt="CHCC 02">
+            <img src="assets/Speaking_Images/CHCC 06092026.jpeg" class="slide" alt="CHCC">
+            <img src="assets/Speaking_Images/Clean Buses 01 05172026.JPG" class="slide" alt="Clean Buses 01">
+            <img src="assets/Speaking_Images/Clean Buses 02 05172026.JPG" class="slide" alt="Clean Buses 02">
+            <img src="assets/Speaking_Images/Clean Buses 03 05172026.JPG" class="slide" alt="Clean Buses 03">
+            <img src="assets/Speaking_Images/Clean Buses 04 05172026.jpeg" class="slide" alt="Clean Buses 04">
+            <img src="assets/Speaking_Images/Clean Buses 05 05172026.jpeg" class="slide" alt="Clean Buses 05">
+            <img src="assets/Speaking_Images/EVCS 01 03172026.PNG" class="slide" alt="EVCS 01">
+            <img src="assets/Speaking_Images/EVCS 02 03172026.PNG" class="slide" alt="EVCS 02">
+            <img src="assets/Speaking_Images/EVCS 03 03172026.jpeg" class="slide" alt="EVCS 03">
+            <img src="assets/Speaking_Images/Ivey 01 05292026.jpeg" class="slide" alt="Ivey 01">
+            <img src="assets/Speaking_Images/Ivey 02 05292026.jpg" class="slide" alt="Ivey 02">
+            <img src="assets/Speaking_Images/OTU 01 06022026.jpeg" class="slide" alt="OTU 01">
+            <img src="assets/Speaking_Images/OTU 02 06022026.jpeg" class="slide" alt="OTU 02">
+          </div>
+          <button class="gallery-btn prev" aria-label="Previous slide">‹</button>
+          <button class="gallery-btn next" aria-label="Next slide">›</button>
+          <div class="gallery-dots" aria-hidden="false"></div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+    :root { --speaking-gallery-height: 640px; }
+    .speaking-gallery { padding: 24px 0 36px; }
+    .speaking-gallery .gallery { position: relative; max-width: 1000px; margin: 0 auto; }
+    .speaking-gallery .gallery-viewport { position: relative; overflow: hidden; height: var(--speaking-gallery-height); }
+    .speaking-gallery .gallery-viewport .slide { width: 100%; height: var(--speaking-gallery-height); display: none; object-fit: cover; object-position: center; }
+    .speaking-gallery .gallery-viewport .slide.active { display: block; }
+    .speaking-gallery .gallery-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.45); color: #fff; border: none; padding: 6px 10px; cursor: pointer; font-size: 22px; }
+    .speaking-gallery .gallery-btn.prev { left: 8px; }
+    .speaking-gallery .gallery-btn.next { right: 8px; }
+    .speaking-gallery .gallery-dots { text-align: center; margin-top: 10px; }
+    .speaking-gallery .gallery-dots button { background: #ddd; border: none; width: 10px; height: 10px; border-radius: 50%; margin: 0 4px; display: inline-block; cursor: pointer; }
+    .speaking-gallery .gallery-dots button.active { background: #333; }
+    @media (max-width:700px){ :root{ --speaking-gallery-height: 180px; } .speaking-gallery .gallery-btn{ font-size:18px; } }
+    </style>
+
+    <script>
+    (function(){
+      var gallery = document.getElementById('speakingGallery');
+      if(!gallery) return;
+      var slides = gallery.querySelectorAll('.slide');
+      var dotsWrap = gallery.querySelector('.gallery-dots');
+      var prev = gallery.querySelector('.prev');
+      var next = gallery.querySelector('.next');
+      var current = 0;
+      var interval = 4000;
+      var timer;
+
+      function renderDots(){
+        slides.forEach(function(_,i){
+          var btn = document.createElement('button');
+          btn.setAttribute('aria-label','Go to slide '+(i+1));
+          btn.addEventListener('click',function(){ goTo(i); });
+          dotsWrap.appendChild(btn);
+        });
+        updateDots();
+      }
+
+      function updateDots(){
+        var dots = dotsWrap.querySelectorAll('button');
+        dots.forEach(function(d,i){ d.classList.toggle('active', i===current); });
+      }
+
+      function show(n){
+        slides.forEach(function(s,i){ s.classList.toggle('active', i===n); });
+        current = n;
+        updateDots();
+      }
+
+      function nextSlide(){ show((current+1) % slides.length); }
+      function prevSlide(){ show((current-1+slides.length) % slides.length); }
+      function goTo(n){ show(n); resetTimer(); }
+
+      prev.addEventListener('click', function(e){ e.preventDefault(); prevSlide(); });
+      next.addEventListener('click', function(e){ e.preventDefault(); nextSlide(); });
+
+      function startTimer(){ timer = setInterval(nextSlide, interval); }
+      function stopTimer(){ clearInterval(timer); }
+      function resetTimer(){ stopTimer(); startTimer(); }
+
+      gallery.addEventListener('mouseenter', stopTimer);
+      gallery.addEventListener('mouseleave', startTimer);
+
+      renderDots();
+      show(0);
+      startTimer();
+    })();
+    </script>
+
 <section class="block" style="background:var(--surface);">
   <div class="container">
     <div class="section-head reveal">
