@@ -80,7 +80,7 @@
       <!-- Video embed -->
       <div class="clip-embed-frame reveal">
         <div class="clip-embed-aspect">
-          <video controls playsinline preload="metadata" autoplay muted loop aria-label="Transera Group brand video" style="width:100%;object-fit:cover;">
+          <video id="promoVideo" controls playsinline preload="metadata" autoplay muted loop aria-label="Transera Group brand video" style="width:100%;object-fit:cover;">
             <source src="assets/hero/Brand_60s.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -846,6 +846,17 @@
     showBanner();
   }
 })();
+// Home page — click video to navigate if near end
+const video = document.getElementById("promoVideo");
+
+video.addEventListener("click", function () {
+    const remainingTime = video.duration - video.currentTime;
+
+    // If the click happens in the last 5 seconds
+    if (remainingTime <= 5) {
+        window.location.href = "book.html";
+    }
+});
 </script>
 </body>
 </html>
