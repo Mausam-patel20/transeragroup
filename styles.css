@@ -2931,10 +2931,20 @@ footer::before{
 }
 footer .container{ position:relative; z-index:2;}
 .footer-grid{
-  display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; align-items: start;
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr 0.9fr 0.8fr;
+  gap: 32px 28px;
+  align-items: start;
 }
-@media (max-width: 940px){.footer-grid{grid-template-columns: 1fr 1fr;}}
-@media (max-width: 520px){.footer-grid{grid-template-columns: 1fr;}}
+@media (max-width: 1100px){
+  .footer-grid{ grid-template-columns: 1.2fr 1fr 1fr; }
+}
+@media (max-width: 940px){
+  .footer-grid{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px){
+  .footer-grid{ grid-template-columns: 1fr; }
+}
 .footer-grid h5{color:#fff; font-size:13px; margin: 0 0 18px; letter-spacing:.18em; text-transform:uppercase; font-weight:700;}
 .footer-grid ul{list-style:none; padding:0; margin:0;}
 .footer-grid ul li{margin-bottom:11px; font-size:14px;}
@@ -6628,4 +6638,74 @@ footer .container{ position:relative; z-index:2;}
   .clip-embed-actions{ flex-direction: column; align-items: stretch; }
   .clip-embed-actions .btn,
   .clip-embed-actions .btn-view-sample-report{ width: 100%; justify-content: center; }
+}
+/* =========================================================
+   APPROACH PAGE — PDF Preview Buttons
+   Per Q6: rectangle with thumbnail, title, and "View PDF" link
+   ========================================================= */
+.pdf-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 0;
+  gap: 10px;
+}
+
+.pdf-col h5 {
+  margin: 0;
+}
+
+.pdf-preview-btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  height: 190px;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 12px;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pdf-preview-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pdf-preview-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.pdf-btn-text {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  padding: 9px 10px;
+  border-radius: 999px;
+  background: rgba(8, 24, 36, 0.72);
+  backdrop-filter: blur(2px);
+  opacity: 1;
+  z-index: 2;
+}
+
+.pdf-preview-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.28) 100%);
+  opacity: 0.8;
+  z-index: 1;
+  pointer-events: none;
 }
