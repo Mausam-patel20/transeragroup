@@ -1479,7 +1479,7 @@ a.service-card h3, a.service-card p, a.service-card .lead-line{color:inherit;}
 }
 .voice-feature{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap:36px;
   align-items:stretch; 
   margin-bottom: 56px;
@@ -1894,7 +1894,7 @@ a.service-card h3, a.service-card p, a.service-card .lead-line{color:inherit;}
 }
 .assoc-grid{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: clamp(16px, 2vw, 28px);
   align-items:center;
   max-width: 920px;
@@ -6607,12 +6607,14 @@ footer .container{ position:relative; z-index:2;}
   box-shadow: 0 24px 64px rgba(0,0,0,.4);
   background: #000;
 }
-.clip-embed-aspect iframe{
+.clip-embed-aspect iframe,
+.clip-embed-aspect video{
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   border: 0;
+  display: block;
 }
 .clip-embed-actions{
   display: flex;
