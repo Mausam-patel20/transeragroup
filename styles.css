@@ -1894,7 +1894,7 @@ a.service-card h3, a.service-card p, a.service-card .lead-line{color:inherit;}
 }
 .assoc-grid{
   display:grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: clamp(16px, 2vw, 28px);
   align-items:center;
   max-width: 920px;
@@ -4243,17 +4243,23 @@ footer .container{ position:relative; z-index:2;}
 .sda-modal-panel{
   position: relative;
   z-index: 1;
-  width: 100%;
-  max-width: 980px;
-  height: 90vh;
-  max-height: 92vh;
+  width: min(100%, 1400px);
+  height: min(100vh - 32px, 960px);
+  max-height: calc(100vh - 32px);
   background: #fff;
-  border-radius: 14px;
+  border-radius: 18px;
   box-shadow: 0 30px 80px rgba(0,0,0,.35);
   display: flex;
   flex-direction: column;
   overflow: hidden;
   animation: sdaModalIn .25s var(--ease) both;
+}
+
+.brochure-modal-panel {
+  width: min(100%, 1320px);
+  height: min(100vh - 32px, 960px);
+  max-height: calc(100vh - 32px);
+  border-radius: 16px;
 }
 @keyframes sdaModalIn{
   from{ opacity: 0; transform: translateY(20px) scale(.97); }
@@ -4264,20 +4270,34 @@ footer .container{ position:relative; z-index:2;}
   top: 14px;
   right: 14px;
   z-index: 5;
-  width: 36px; height: 36px;
-  background: rgba(8,41,53,.06);
-  border: 1px solid rgba(8,41,53,.12);
-  border-radius: 8px;
-  display: grid;
-  place-items: center;
+  min-width: 42px;
+  height: 42px;
+  padding: 0 14px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   cursor: pointer;
-  color: var(--navy);
+  color: #fff;
   transition: all .2s var(--ease);
+  box-shadow: 0 8px 22px rgba(0,0,0,.22);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
 }
 .sda-modal-close:hover{
-  background: var(--navy);
+  background: rgba(255,255,255,.24);
   color: #fff;
-  border-color: var(--navy);
+  border-color: rgba(255,255,255,.3);
+  transform: translateY(-1px);
+}
+
+.brochure-modal-panel .sda-modal-close {
+  top: 16px;
+  right: 16px;
 }
 
 /* Header with Title + Download button */
@@ -5231,21 +5251,33 @@ footer .container{ position:relative; z-index:2;}
 .sda-modal-close{
   position: absolute;
   top: 16px;
-  right: 16px;
+  right: 66px;
   z-index: 10;
-  width: 36px; height: 36px;
-  display: grid; place-items: center;
-  background: rgba(255,255,255,.9);
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  color: var(--navy);
+  padding:7px 13px; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 999px;
+  color: #fff;
   cursor: pointer;
   transition: all .2s ease;
+  box-shadow: 0 8px 22px rgba(0,0,0,.22);
+  font-size:11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.sda-modal-close svg{
+  display: block;
+  flex-shrink: 0;
 }
 .sda-modal-close:hover{
-  background: var(--gold);
+  background: rgba(255,255,255,.24);
   color: #fff;
-  border-color: var(--gold);
+  border-color: rgba(255,255,255,.3);
+  transform: translateY(-1px);
 }
 .sda-modal-header{
   padding: 28px 32px 20px;
